@@ -2,20 +2,20 @@ import Note from "./Note";
 
 class Notes { //TODO FOLLOW EXPANSION OF NOTE.js CLASS
     notesList = [
-        new Note('pn', 'Notatka 1', 'notatka 1 z dnia 1'),
-        new Note('wt', 'Notatka 1', 'notatka 1 z dnia 2'),
-        new Note('sr', 'Notatka 1', 'notatka 1 z dnia 3')
+        new Note(1,'pn', 'Notatka 1', 'notatka 1 z dnia 1'),
+        new Note(2,'wt', 'Notatka 1', 'notatka 1 z dnia 2'),
+        new Note(3,'sr', 'Notatka 1', 'notatka 1 z dnia 3')
     ];
 
     constructor() {
-        this.addNote('pn', 'Notatka 2', 'notatka 2 z dnia 1');
+        this.addNote(4,'pn', 'Notatka 2', 'notatka 2 z dnia 1');
     }
 
-    addNote(date, title, text){
-        this.notesList.push(new Note(date, title, text))
+    addNote(id, date, title, text){ //TODO MAKE ID UNIQUE UNTILL NODE WILL COME
+        this.notesList.push(new Note(id, date, title, text))
     }
-    deleteNote(date, title, text){
-        this.notesList.splice(this.notesList.indexOf(new Note(date, title, text)), 1)
+    deleteNote(id, date, title, text){
+        this.notesList.splice(this.notesList.indexOf(new Note(id, date, title, text)), 1)
     }
 }
 

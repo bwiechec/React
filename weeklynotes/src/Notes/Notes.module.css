@@ -1,8 +1,7 @@
 
 .Notes{
-    margin: 5vh 5vw 5vh 5vw;
-    min-width: 80vw;
-    max-width: 90vw;
-    min-height: 70vh;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
     /*border: 2px solid black;*/
 }

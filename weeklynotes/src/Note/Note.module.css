@@ -1,11 +1,24 @@
+*{
+    box-sizing: border-box;
+}
+
 .Note{
     margin: 0 1vw;
-    min-width: 10vw;
-    min-height: 70vh;
+    min-width: 9vw;
+    min-height: 50vh;
     border: 2px solid red;
+    border-radius: 5px;
     display: inline-table;
 }
 
 .NoteDay{
+    display: inline;
+    width: 9vw;
+    min-height: 5vh;
+    font-size: calc(10px + 1vmin);
     text-align: center;
+}
+.NoteDayList{
+    /*display: list-item;*/
+    list-style-type: none;
 }

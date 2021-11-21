@@ -26,6 +26,9 @@ class App extends React.Component{
                     <Note   days={this.state.days}
                             notes={this.state.notes}/>
                 </div>
+                <div className={classes.Add}>
+                    TU BEDZIE DODANIE
+                </div>
                 <footer className={classes.AppFooter}>
                     <p>Author: {this.state.author}</p>
                 </footer>

@@ -7,19 +7,29 @@ class Event extends React.Component{
         super(props);
     }
 
-
     render() {
-        let notesList;
+        let notesList = [];
         if (this.props.notesList.size === 0) {
-            notesList = <div>Brak notatek ilosc: {this.props.notesList.size}</div>
+            notesList.push(<div className={classes.Event} >Brak notatek ilosc: {this.props.notesList.size}</div>);
         }else {
-            notesList = this.props.notesList.map((item, pos) => {
-                return this.props.day === item.dateOf ? <div key={pos} className={classes.Event}>{item.dateOf + '\n' + item.titleOf
-                    + '\n' + item.textOf}</div> :
-                    null
-            })
+
+            // this.props.notesList.forEach(item =>{
+            //     if(this.props.day === item.dateOf){
+            //         notesList.push(<div className={classes.Event} onClick={function() {alert("Event selected")}}>
+            //             {item.dateOf}<br/>{item.titleOf} <br/>{item.textOf}</div>)
+            //     }
+            // });
+
+            for(const item of this.props.notesList){
+                console.log("item" + item);
+                if(this.props.day === item.dateOf){
+                    notesList.push(<div key={item.id} className={classes.Event} onClick={function() {alert("Event selected " + item.id)}}>
+                        {item.dateOf}<br/>{item.titleOf} <br/>{item.textOf}</div>)
+                }
+            }
         }
-        return notesList;
+        console.log(notesList)
+        return notesList.length === 0 ? <div className={classes.Event} >Brak notatek mozesz stworzyc nowe! {this.props.notesList.size}</div> : notesList;
     }
 }
 

@@ -1,4 +1,12 @@
+*{
+    box-sizing: border-box;
+}
+
 .Event{ /* TODO STYLE EVENT */
     border: 1px solid black;
-    margin: 1px;
+    /*margin-left: -3vw;*/
+    margin-bottom: 1vh;
+    object-fit: fill;
+    cursor: pointer;
+    width: 9vw;
 }
