@@ -4,9 +4,12 @@
 
 .Event{ /* TODO STYLE EVENT */
     border: 1px solid black;
-    /*margin-left: -3vw;*/
     margin-bottom: 1vh;
     object-fit: fill;
     cursor: pointer;
     width: 9vw;
+    height: 10vh;
+    background-image: url('../img/note.jpg');
+    background-size: cover;
+    font-family: 'Teko', sans-serif;
 }

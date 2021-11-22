@@ -6,9 +6,13 @@
     margin: 0 1vw;
     min-width: 9vw;
     min-height: 50vh;
-    border: 2px solid red;
+    max-height: 50vh;
+    border: 2px solid #ad3232;
     border-radius: 5px;
-    display: inline-table;
+    overflow-x: hidden;
+    display: inline-flex;
+    overflow-y: auto;
+
 }
 
 .NoteDay{
@@ -21,4 +25,13 @@
 .NoteDayList{
     /*display: list-item;*/
     list-style-type: none;
+}
+
+.Day{
+    border: 1px solid black;
+    margin-bottom: 1vh;
+    object-fit: fill;
+    cursor: pointer;
+    width: 9vw;
+    height: 5vh;
 }

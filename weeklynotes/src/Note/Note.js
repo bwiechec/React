@@ -12,7 +12,7 @@ class Note extends React.Component{ // TODO: rename
     render() {
         let note = this.props.days.map((item, pos) => {
             return <div key={pos} className={classes.Note}>
-                <div className={classes.NoteDay}><p>{item}</p></div>
+                <div className={classes.NoteDay}><div className={classes.Day}>{item}</div></div>
                     <Event  notesList={this.props.notes.notesList}
                             day={item}/>
             </div>
