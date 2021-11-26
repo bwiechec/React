@@ -27,9 +27,8 @@
     list-style-type: none;
 }
 
-.Day{
+.Day{ /* TODO SPRAWDZIC CZY MUSI BYC DIV W DIV   */
     border: 1px solid black;
-    margin-bottom: 1vh;
     object-fit: fill;
     cursor: pointer;
     width: 9vw;

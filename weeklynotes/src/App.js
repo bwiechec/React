@@ -3,17 +3,19 @@ import React from "react";
 import Note from './Note/Note'
 import Notes from "./Utils/Notes";
 import AddNote from "./AddNote/AddNote";
+import NoteInfo from "./NoteInfo/NoteInfo";
 
 class App extends React.Component{
 
     constructor(props) {
         super(props);
         this.state = {
-            appName: 'Weekly Notes',
+            appName: 'Weekly NoteInfo',
             author: 'Bartosz Wiecheć',
             days: ['pn', 'wt', 'sr', 'czw', 'pt', 'sb', 'nd'],
             notes: new Notes(),
-            btnPopup: false
+            btnPopup: false,
+            infoPopup: false
         };
     }
 
@@ -39,6 +41,13 @@ class App extends React.Component{
         console.log(this.state.notes);
     }
 
+    changeInfoPopup = () => {
+        const newInfoPopup = !this.state.infoPopup;
+        this.setState({
+            infoPopup: newInfoPopup
+        })
+    }
+
     render(){
         return (
             <div className={classes.App}>
@@ -46,9 +55,12 @@ class App extends React.Component{
                     <p>{this.state.appName}</p>
                 </header>
                 <div className={classes.Notes}>
-                    {/*<p>Notes will be here!</p>*/}
+                    {/*<p>NoteInfo will be here!</p>*/}
                     <Note   days={this.state.days}
-                            notes={this.state.notes}/>
+                            notes={this.state.notes}
+                            changeInfoPopup={this.changeInfoPopup}/>
+                    <NoteInfo    trigger={this.state.infoPopup}
+                                 changeInfoPopup={this.changeInfoPopup}/>
                 </div>
                 <div className={classes.Add}>
                     <button onClick={() => this.changeBtnPopup()} className={classes.AddButton}>Add new note</button>

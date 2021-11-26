@@ -4,11 +4,11 @@
 
 .Event{ /* TODO STYLE EVENT */
     border: 1px solid black;
-    margin-bottom: 1vh;
+    margin-top: 1vh;
     object-fit: fill;
     cursor: pointer;
     width: 9vw;
-    height: 10vh;
+    height: 8vh;
     background-image: url('../img/note.jpg');
     background-size: cover;
     font-family: 'Teko', sans-serif;

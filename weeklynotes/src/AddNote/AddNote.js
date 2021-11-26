@@ -37,7 +37,6 @@ class AddNote extends React.Component{ //TODO: COMPONENT AddNote
     }
 
     render(){
-
         return (this.props.trigger) ? (
             <div className={classes.Add}>
                 <div className={classes.AddInner}>
