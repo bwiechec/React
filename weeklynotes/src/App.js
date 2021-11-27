@@ -12,7 +12,7 @@ class App extends React.Component{
         this.state = {
             appName: 'Weekly Notes',
             author: 'Bartosz Wiecheć',
-            days: ['pn', 'wt', 'sr', 'czw', 'pt', 'sb', 'nd'],
+            days: [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
             notes: new Notes(),
             btnPopup: false,
             infoPopup: false,
@@ -37,6 +37,7 @@ class App extends React.Component{
     }
 
     addNewEvent = (date, title, text) =>{
+        console.log(date + title + text);
         const maxId = this.getMaxId()
         this.state.notes.addNote(maxId+1, date, title, text);
         console.log(this.state.notes);
@@ -59,6 +60,7 @@ class App extends React.Component{
     }
 
     render(){
+        console.log( "dzien:" + this.state.days[(new Date().getDay() +1) %7])
         return (
             <div className={classes.App}>
                 <header className={classes.AppHeader}>

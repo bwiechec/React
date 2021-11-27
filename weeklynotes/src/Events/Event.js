@@ -10,7 +10,7 @@ class Event extends React.Component{
     render() {
         let notesList = [];
         if (this.props.notesList.size === 0) {
-            notesList.push(<div className={classes.noEvent} >Brak notatek mozesz stworzyc nowe!</div>);
+            notesList.push(<div className={classes.noEvent} >You didn't add any notes for today yet, if you need you can create some!</div>);
         }else {
 
             for(const item of this.props.notesList){ //TODO MAKE IT LIKE ON NOTEINFO (MAP)
@@ -23,7 +23,7 @@ class Event extends React.Component{
             }
         }
         console.log(notesList)
-        return notesList.length === 0 ? <div className={classes.noEvent} >Brak notatek mozesz stworzyc nowe!</div> : notesList;
+        return notesList.length === 0 ? <div className={classes.noEvent} >You didn't add any notes for today yet, if you need you can create some</div> : notesList;
     }
 }
 

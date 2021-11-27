@@ -18,7 +18,7 @@
     display: inline;
     width: 9vw;
     min-height: 5vh;
-    font-size: calc(10px + 1vmin);
+    font-size: calc(5px + 1vmin);
     text-align: center;
 }
 .NoteDayList{
