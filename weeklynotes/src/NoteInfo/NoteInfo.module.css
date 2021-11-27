@@ -15,7 +15,14 @@
     padding: 32px;
     width: 100%;
     max-width: 640px;
-    background-color: #FFF;
+}
+
+.InfoInner > *{
+    background: none;
+}
+
+.InfoDisplay{
+    text-align: left;
 }
 
 .InfoInner .CloseBtn{

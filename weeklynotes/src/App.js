@@ -10,12 +10,13 @@ class App extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            appName: 'Weekly NoteInfo',
+            appName: 'Weekly Notes',
             author: 'Bartosz Wiecheć',
             days: ['pn', 'wt', 'sr', 'czw', 'pt', 'sb', 'nd'],
             notes: new Notes(),
             btnPopup: false,
-            infoPopup: false
+            infoPopup: false,
+            selectedNoteInfo: null
         };
     }
 
@@ -41,10 +42,19 @@ class App extends React.Component{
         console.log(this.state.notes);
     }
 
-    changeInfoPopup = () => {
+    changeInfoPopup = (id) => {
         const newInfoPopup = !this.state.infoPopup;
         this.setState({
-            infoPopup: newInfoPopup
+            infoPopup: newInfoPopup,
+            selectedNoteInfo: id
+        })
+    }
+
+    closeInfoPopup = () => {
+        const newInfoPopup = !this.state.infoPopup;
+        this.setState({
+            infoPopup: newInfoPopup,
+            selectedNoteInfo: null
         })
     }
 
@@ -59,8 +69,10 @@ class App extends React.Component{
                     <Note   days={this.state.days}
                             notes={this.state.notes}
                             changeInfoPopup={this.changeInfoPopup}/>
-                    <NoteInfo    trigger={this.state.infoPopup}
-                                 changeInfoPopup={this.changeInfoPopup}/>
+                    <NoteInfo   trigger={this.state.infoPopup}
+                                closeInfoPopup={this.closeInfoPopup}
+                                selectedNoteInfo={this.state.selectedNoteInfo}
+                                notes={this.state.notes.notesList}/>
                 </div>
                 <div className={classes.Add}>
                     <button onClick={() => this.changeBtnPopup()} className={classes.AddButton}>Add new note</button>

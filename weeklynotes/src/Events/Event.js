@@ -10,27 +10,20 @@ class Event extends React.Component{
     render() {
         let notesList = [];
         if (this.props.notesList.size === 0) {
-            notesList.push(<div className={classes.Event} >Brak notatek ilosc: {this.props.notesList.size}</div>);
+            notesList.push(<div className={classes.noEvent} >Brak notatek mozesz stworzyc nowe!</div>);
         }else {
 
-            // this.props.notesList.forEach(item =>{
-            //     if(this.props.day === item.dateOf){
-            //         notesList.push(<div className={classes.Event} onClick={function() {alert("Event selected")}}>
-            //             {item.dateOf}<br/>{item.titleOf} <br/>{item.textOf}</div>)
-            //     }
-            // });
-
-            for(const item of this.props.notesList){
+            for(const item of this.props.notesList){ //TODO MAKE IT LIKE ON NOTEINFO (MAP)
                 console.log("item" + item);
                 if(this.props.day === item.dateOf){
                     notesList.push(<div key={item.id} className={classes.Event}
-                        onClick={() => this.props.changeInfoPopup()}>
+                        onClick={() => this.props.changeInfoPopup(item.id)}>
                         {item.dateOf}<br/>{item.titleOf} <br/>{item.textOf}</div>)
                 }
             }
         }
         console.log(notesList)
-        return notesList.length === 0 ? <div className={classes.Event} >Brak notatek mozesz stworzyc nowe! {this.props.notesList.size}</div> : notesList;
+        return notesList.length === 0 ? <div className={classes.noEvent} >Brak notatek mozesz stworzyc nowe!</div> : notesList;
     }
 }
 
