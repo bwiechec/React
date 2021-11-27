@@ -15,15 +15,12 @@ class Note extends React.Component{ // TODO: rename
         let month = date.getMonth() + 1;
         let day = date.getDate();
 
-        month < 10 ?
-            month = '0' + month
-            :
-            month = month
-
-        day < 10 ?
-            day = '0' + day
-            :
-            day = day
+        if( month < 10 ){
+            month = '0' + month;
+        }
+        if( day < 10 ){
+            day = '0' + day;
+        }
 
         return year + "-" + month + "-" +  day;
 
@@ -38,7 +35,7 @@ class Note extends React.Component{ // TODO: rename
             note.push(<div key={currDay} className={classes.Note}>
                         <div className={classes.NoteDay}>
                             <div className={classes.Day} onClick={function() {alert("Tutaj będzie okno z wszystkimi notatkami z dnia (chyba jednak nie)")}}>
-                                {this.props.days[day%7]}<br/> {currDay}</div>
+                                <b>{this.props.days[day%7]}</b><br/> {currDay}</div>
                         </div>
                             <Event  notesList={this.props.notes.notesList}
                                     day={currDay}
@@ -46,18 +43,6 @@ class Note extends React.Component{ // TODO: rename
                     </div>)
             day++;
         }
-
-        // let note = this.props.days.map((item, pos) => {
-        //     return <div key={pos} className={classes.Note}>
-        //         <div className={classes.NoteDay}>
-        //             <div className={classes.Day} onClick={function() {alert("Tutaj będzie okno z wszystkimi notatkami z dnia (chyba jednak nie)")}}>{item}</div>
-        //         </div>
-        //             <Event  notesList={this.props.notes.notesList}
-        //                     day={item}
-        //                     changeInfoPopup={this.props.changeInfoPopup}/>
-        //     </div>
-        // });
-        // console.log(this.props.notes.notesList);
 
         return note;
     }

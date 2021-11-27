@@ -13,7 +13,9 @@
     background-size: cover;
     font-family: 'Teko', sans-serif;
 }
-
+.Event > p{
+    background: none;
+}
 .noEvent{ /* TODO STYLE EVENT */
     /*border: 1px solid black;*/
     margin-top: 1vh;

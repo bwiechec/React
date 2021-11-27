@@ -1,8 +1,7 @@
 import React from "react";
 import classes from "./NoteInfo.module.css";
-import Note from "../Utils/Note"
 
-class NoteInfo extends React.Component{ //TODO: COMPONENT NOTES + rename
+class NoteInfo extends React.Component{ //TODO: MAKE IT NICER
 
     constructor(props) {
         super(props);
