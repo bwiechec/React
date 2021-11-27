@@ -1,6 +1,6 @@
 # Weekly Notes
 ## WORK IN PROGRESS 
-![55%](https://progress-bar.dev/55)
+![60%](https://progress-bar.dev/60)
 
 Web aplication made with React made for creating quick reminder notes.
 After finishing React side I'm going to add backend (Node.js).
