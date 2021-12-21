@@ -35,9 +35,10 @@ class Note extends React.Component{ // TODO: rename
             note.push(<div key={currDay} className={classes.Note}>
                         <div className={classes.NoteDay}>
                             <div className={classes.Day} onClick={function() {alert("Tutaj będzie okno z wszystkimi notatkami z dnia (chyba jednak nie)")}}>
-                                <b>{this.props.days[day%7]}</b><br/> {currDay}</div>
+                                <b>{this.props.days[day%7]}</b><br/>{currDay}
+                            </div>
                         </div>
-                            <Event  notesList={this.props.notes.notesList}
+                            <Event  notesList={this.props.notes.notesList != null ? this.props.notes.notesList : []}
                                     day={currDay}
                                     changeInfoPopup={this.props.changeInfoPopup}/>
                     </div>)

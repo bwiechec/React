@@ -20,6 +20,24 @@ class App extends React.Component{
         };
     }
 
+    componentWillMount() {
+        let notesListGot = new Notes();
+        fetch('/api/customers')
+            .then(res => res.json())
+            .then(notesList => {
+                //console.log("notes list " + notesList[0].id)
+                for(let i = 0; i < notesList.length; i++){
+                    notesListGot.addNote(notesList[i].id,notesList[i].dateOf, notesList[i].titleOf, notesList[i].textOf)
+                    console.log(notesList[i].id,notesList[i].dateOf, notesList[i].titleOf, notesList[i].textOf)
+                }
+                this.setState({notes: notesListGot});
+                this.forceUpdate()
+                }
+            );
+
+        //console.log("Notes get: " + notesListGot);
+    }
+
     changeBtnPopup = () => {
         const newBtnPopup = !this.state.btnPopup;
         this.setState({
@@ -40,7 +58,7 @@ class App extends React.Component{
         console.log(date + title + text);
         const maxId = this.getMaxId()
         this.state.notes.addNote(maxId+1, date, title, text);
-        console.log(this.state.notes);
+        //console.log(this.state.notes);
     }
 
     changeInfoPopup = (id) => {
@@ -60,7 +78,7 @@ class App extends React.Component{
     }
 
     render(){
-        console.log( "dzien:" + this.state.days[(new Date().getDay() +1) %7])
+        //console.log( "dzien:" + this.state.days[(new Date().getDay() +1) %7])
         return (
             <div className={classes.App}>
                 <header className={classes.AppHeader}>
@@ -69,7 +87,7 @@ class App extends React.Component{
                 <div className={classes.Notes}>
                     {/*<p>NoteInfo will be here!</p>*/}
                     <Note   days={this.state.days}
-                            notes={this.state.notes}
+                            notes={this.state.notes != null ? this.state.notes : new Notes()}
                             changeInfoPopup={this.changeInfoPopup}/>
                     <NoteInfo   trigger={this.state.infoPopup}
                                 closeInfoPopup={this.closeInfoPopup}

@@ -5,15 +5,18 @@ class Event extends React.Component{
 
     constructor(props) {
         super(props);
+        this.state = {
+            customers: []
+        };
     }
 
     render() {
         let notesList = [];
         if (this.props.notesList.size === 0) {
-            notesList.push(<div className={classes.noEvent} >You didn't add any notes for today yet, if you can create some!</div>);
+            notesList.push(<div className={classes.noEvent} >You didn't add any notes for today yet, you can create some!</div>);
         }else {
 
-            for(const item of this.props.notesList){ //TODO MAKE IT LIKE ON NOTEINFO (MAP) OR AT LEAST CONSIDER IT
+            for(const item of this.props.notesList){
                 console.log("item" + item);
                 if(this.props.day === item.dateOf){
                     notesList.push(
@@ -25,9 +28,10 @@ class Event extends React.Component{
                 }
             }
         }
-        console.log(notesList)
+        //console.log(notesList)
         return notesList.length === 0 ?
-            <div className={classes.noEvent} >You didn't add any notes for today yet, if you can create some</div>
+            <div className={classes.noEvent} >You didn't add any notes for today yet, you can create some
+            </div>
             :
             notesList;
     }
