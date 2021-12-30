@@ -1,10 +1,11 @@
 const Note = require("./Note");
-
+const date = new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate()
+console.log(date);
 class Notes { //TODO FOLLOW EXPANSION OF NOTE.js CLASS
     notesList = [
         //new Note(1,, 'Notatka 1', 'notatka 1 z dnia 1'),
-        new Note(2,'2021-12-22', 'Notatka 1', 'notatka 1 z dnia 2'),
-        //new Note(3,Date.now(), 'Notatka 1', 'notatka 1 z dnia 3')
+        new Note(2,'2021-12-28', 'Notatka 1', 'notatka 1 z dnia 22.12'),
+        new Note(3,date, 'Notatka 1', 'notatka 1 z dnia 3')
     ];
 
     constructor() {

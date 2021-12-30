@@ -1,3 +1,7 @@
+//TODO: 1. DODAWANIE NOWYCH NOTATEK (PO PROSTU)
+//TODO: 2. DODAWANIE NOWYCH NOTATEK (DO BAZY)
+//TODO: 3. POBIERANIE NOTATEK (Z BAZY)
+
 import classes from './App.module.css';
 import React from "react";
 import Note from './Note/Note'
