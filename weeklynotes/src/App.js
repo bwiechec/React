@@ -51,8 +51,9 @@ class App extends React.Component{
 
     getMaxId(){
         let maxVal = 0;
-        for(const x in this.state.notes){
-            if(x > maxVal) maxVal = x;
+        for(let x of this.state.notes.notesList){
+            if(x.id > maxVal) maxVal = x.id;
+            console.log("id: "+x)
         }
 
         return maxVal;
@@ -60,7 +61,7 @@ class App extends React.Component{
 
     addNewEvent = (date, title, text) =>{
         console.log(date + title + text);
-        const maxId = this.getMaxId()
+        let maxId = this.getMaxId()
         this.state.notes.addNote(maxId+1, date, title, text);
         //console.log(this.state.notes);
     }
