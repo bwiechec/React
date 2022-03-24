@@ -17,9 +17,9 @@ class Event extends React.Component{
         }else {
 
             for(const item of this.props.notesList){
-                console.log("item" + item);
+                //console.log("item" + item);
                 if(this.props.day === item.dateOf){
-                    console.log("item id: "+item.id)
+                    //console.log("item id: "+item.id)
                     notesList.push(
                         <div key={item.id} className={classes.Event} onClick={() => this.props.changeInfoPopup(item.id)}>
                             <p>

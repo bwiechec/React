@@ -8,6 +8,8 @@ class Note extends React.Component{ // TODO: rename
         super(props);
     }
 
+
+
     getTodayDate(x){
         const date = new Date();
         date.setDate(date.getDate() + x);

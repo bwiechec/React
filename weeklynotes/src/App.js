@@ -8,6 +8,8 @@ import Note from './Note/Note'
 import Notes from "./Utils/Notes";
 import AddNote from "./AddNote/AddNote";
 import NoteInfo from "./NoteInfo/NoteInfo";
+import { trackPromise } from 'react-promise-tracker';
+import { Spinner } from './spinner';
 
 class App extends React.Component{
 
@@ -22,23 +24,12 @@ class App extends React.Component{
             infoPopup: false,
             selectedNoteInfo: null
         };
+
+        this.getNotes.bind(this);
     }
 
     componentWillMount() {
-        let notesListGot = new Notes();
-        fetch('/api/customers')
-            .then(res => res.json())
-            .then(notesList => {
-                //console.log("notes list " + notesList[0].id)
-                for(let i = 0; i < notesList.length; i++){
-                    notesListGot.addNote(notesList[i].id,notesList[i].dateOf, notesList[i].titleOf, notesList[i].textOf)
-                    console.log(notesList[i].id,notesList[i].dateOf, notesList[i].titleOf, notesList[i].textOf)
-                }
-                this.setState({notes: notesListGot});
-                this.forceUpdate()
-                }
-            );
-
+        this.getNotes();
         //console.log("Notes get: " + notesListGot);
     }
 
@@ -47,23 +38,36 @@ class App extends React.Component{
         this.setState({
            btnPopup: newBtnPopup
         })
+        this.forceUpdate();
     }
 
-    getMaxId(){
-        let maxVal = 0;
-        for(let x of this.state.notes.notesList){
-            if(x.id > maxVal) maxVal = x.id;
-            console.log("id: "+x)
-        }
-
-        return maxVal;
+    getNotes(){
+        let notesListGot = new Notes();
+        trackPromise(
+        fetch('/api/noteGeneralInfo')
+            .then(res => res.json())
+            .then(notesList => {
+                    //console.log("notes list " + notesList[0].id)
+                    for(let i = 0; i < notesList.length; i++){
+                        let date = new Date(notesList[i].dateOf);
+                        let year = date.getFullYear();
+                        let month = date.getMonth()+1;
+                        month = month < 10 ? '0' + month : month;
+                        let day = date.getDate();
+                        day = day < 10 ? '0' + day : day;
+                        notesListGot.addNote(notesList[i].id, year + '-' + month + '-' + day, notesList[i].titleOf, notesList[i].textOf);
+                        console.log(notesList[i].id, year + '-' + month + '-' + day, notesList[i].titleOf, notesList[i].textOf);
+                    }
+                    this.setState({notes: notesListGot});
+                    this.forceUpdate()
+                    this.render();
+                }
+            )
+        )
     }
 
-    addNewEvent = (date, title, text) =>{
-        console.log(date + title + text);
-        let maxId = this.getMaxId()
-        this.state.notes.addNote(maxId+1, date, title, text);
-        //console.log(this.state.notes);
+    addNewEvent = () =>{
+        this.getNotes();
     }
 
     changeInfoPopup = (id) => {
