@@ -4,6 +4,7 @@
 
 import classes from './App.module.css';
 import React from "react";
+import { render } from 'react-dom';
 import Note from './Note/Note'
 import Notes from "./Utils/Notes";
 import AddNote from "./AddNote/AddNote";
@@ -62,7 +63,8 @@ class App extends React.Component{
                     this.forceUpdate()
                     this.render();
                 }
-            )
+            ),
+            'noteLoad-area',
         )
     }
 

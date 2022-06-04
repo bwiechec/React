@@ -15,25 +15,21 @@ class NoteInfo extends React.Component{ //TODO: MAKE IT NICER
 
     getNoteInfo = (id) =>{
         trackPromise(
-            fetch('/api/noteSpecificInfo?id='+id)
+            fetch('/api/noteSpecificInfo?id=' + id)
                 .then(res => res.json())
                 .then(noteInfo => {
                     let date = new Date(noteInfo[0].dateOf);
                     let year = date.getFullYear();
-                    let month = date.getMonth()+1;
+                    let month = date.getMonth() + 1;
                     month = month < 10 ? '0' + month : month;
                     let day = date.getDate();
                     day = day < 10 ? '0' + day : day;
                     noteInfo[0].dateOf = year + '-' + month + '-' + day;
                     this.setState({selectedNote: noteInfo[0]})
                     this.render()
-                })
+                }),
+            'noteInfo-area',
         );
-    }
-
-    componentWillUpdate(nextProps, nextState, nextContext) {
-        nextState.selectedNoteInfo = null;
-        console.log('nulling prev note ' + nextState.selectedNoteInfo + ' ' + this.setState.selectedNote);
     }
 
     async componentDidUpdate(prevProps, prevState, snapshot) {
@@ -70,7 +66,9 @@ class NoteInfo extends React.Component{ //TODO: MAKE IT NICER
                         <h3>Info</h3>
                         {noteInfoToShow}
                         <button className={classes.CloseBtn} onClick={()=> {this.clearSelectedNote(); this.props.closeInfoPopup()}}>Close</button>
-                        <Spinner />
+                        <Spinner
+                            area={'noteInfo-area'}
+                        />
                     </div>
                 </div>
             )

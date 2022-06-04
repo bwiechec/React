@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./Note.module.css";
 import Event from "../Events/Event";
+import {Spinner} from "../spinner";
 
 class Note extends React.Component{ // TODO: rename
 
@@ -40,6 +41,9 @@ class Note extends React.Component{ // TODO: rename
                                 <b>{this.props.days[day%7]}</b><br/>{currDay}
                             </div>
                         </div>
+                            <Spinner
+                                area={'noteLoad-area'}
+                            />
                             <Event  notesList={this.props.notes.notesList != null ? this.props.notes.notesList : []}
                                     day={currDay}
                                     changeInfoPopup={this.props.changeInfoPopup}/>

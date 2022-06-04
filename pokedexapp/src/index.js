@@ -2,12 +2,26 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import {
+    BrowserRouter,
+    Routes,
+    Route
+} from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
+import PokemonInfo from "./routes/PokemonInfo/PokemonInfo";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <BrowserRouter>
+        {/*<nav style={{textAlign: "center", fontSize: '50px'}}>POKEDEX</nav>*/}
+        <Routes key={'Routes'}>
+            <Route key={'main_route'} path="/" element={<App />}>
+                <Route key={'Route_pokemon'} path="/pokemon" element={<PokemonInfo />} >
+                    <Route key={'Route_pokemon_id'} path=":pokemon" element={<PokemonInfo />} />
+                </Route>
+            </Route>
+        </Routes>
+        <footer style={{textAlign: "right"}}>Bartosz Wiecheć, 2022</footer>
+    </BrowserRouter>,
   document.getElementById('root')
 );
 

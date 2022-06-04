@@ -1,6 +1,6 @@
 import React from "react";
 import { usePromiseTracker } from "react-promise-tracker";
-import {ThreeDots} from "react-loader-spinner";
+import { ThreeDots } from "react-loader-spinner";
 import "./spinner.css";
 
 export const Spinner = (props) => {
