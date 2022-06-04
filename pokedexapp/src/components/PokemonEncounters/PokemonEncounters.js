@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import {CircularProgress, List, ListItem, ListItemButton, Box} from "@mui/material";
 import ListItemText from "@mui/material/ListItemText";
 import { FixedSizeList, ListChildComponentProps } from 'react-window';
-//import classes from "./PokemonType.module.css";
+import classes from "./PokemonEncounters.module.css";
 
 
 export default function PokemonEncounters(props) {
@@ -51,6 +51,6 @@ export default function PokemonEncounters(props) {
     return loading ?
         <CircularProgress key={'circular_progress'} style={{padding:"1%"}}/>
         :
-        <List key={'list'} style={{ width: '100%', maxHeight:"400px", overflowY: "scroll"}}>{encounterChainBody}</List>
+        <List key={'list'} style={{ width: '100%', maxHeight:"400px"}} className={classes.encounter_box}>{encounterChainBody}</List>
         //<List>{encounterChainBody}</List>
 }

@@ -7,6 +7,7 @@ import PokemonType from '../../components/PokemonType/PokemonType'
 import PokemonStats from "../../components/PokemonStats/PokemonStats";
 import PokemonEvolutions from "../../components/PokemonEvolutions/PokemonEvolutions";
 import PokemonEncounters from "../../components/PokemonEncounters/PokemonEncounters";
+import classes from "./PokemonInfo.module.css";
 
 //TODO 1. MOVE STYLES INTO CLASSES
 //TODO 2. USE CSS MODULES
@@ -68,7 +69,7 @@ export default function PokemonInfo() {
                     <Button variant="contained"  size="medium">&larr; Previous</Button>
                 </div>
 
-                <h1 className={'pokeList'} style={{display: "inline-flex"}}>
+                <h1 className={'pokeList'} style={{display: "inline-flex", fontFamily: "'Pokemon Solid', sans-serif", letterSpacing: "2px"}}>
                     {pokemon['name'][0].toUpperCase() + pokemon['name'].substring(1)}
                 </h1>
 
@@ -85,10 +86,10 @@ export default function PokemonInfo() {
                 </div>
 
                 <div key={'pokeStats'} className={"pokeStats"} style={{marginTop: "5%"}}>
-                    <div key={'pokeStats_component'} style={{display: "inline-table", width: '45%', borderStyle: 'solid'}}>
+                    <div key={'pokeStats_component'} className={classes.stat_box} style={{display: "inline-table", width: '45%'}}>
                         <PokemonStats statList={statList}/>
                     </div>
-                    <div key={'PokemonType_component'} style={{display: "inline-table", marginLeft: "5%", width: '45%', borderStyle: 'solid'}}>
+                    <div key={'PokemonType_component'} className={classes.stat_box} style={{display: "inline-table", marginLeft: "5%", width: '45%'}}>
                         <PokemonType typeList={typeList}/>
                         <p>
                             Weaknesses goes here <br/>
@@ -98,14 +99,14 @@ export default function PokemonInfo() {
                 </div>
 
                 <div key={'PokemonEvolutions'} className={"pokeEvolutions"} style={{marginTop: "5%"}}>
-                    <div key={'PokemonEvolutions_component'} style={{display: "inline-block", minWidth: '90%', borderStyle: 'solid'}}>
+                    <div key={'PokemonEvolutions_component'} className={classes.stat_box} style={{display: "inline-block", minWidth: '90%'}}>
                         <h4 style={{textAlign:'left', paddingLeft: '5%'}}>Evolutions:</h4>
                         <PokemonEvolutions speciesUrl={speciesUrl}/>
                     </div>
                 </div>
 
                 <div key={'PokemonEncounters'} className={"pokeEncounters"} style={{marginTop: "5%"}}>
-                    <div key={'PokemonEncounters_component'} style={{display: "inline-block", minWidth: '90%', borderStyle: 'solid'}}>
+                    <div key={'PokemonEncounters_component'} className={classes.stat_box} style={{display: "inline-block", minWidth: '90%'}}>
                         <h4 style={{textAlign:'left', paddingLeft: '2%'}}>Encounters:</h4>
                         <PokemonEncounters encountersUrl={encountersUrl}/>
                     </div>
