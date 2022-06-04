@@ -1,0 +1,72 @@
+.normal, .normal:hover{
+    background-color: gray !important;
+}
+
+.fighting, .fighting:hover{
+    background-color: darkred !important;
+}
+
+.flying, .flying:hover{
+    background-color: #61dafb !important;
+}
+
+.poison, .poison:hover{
+    background-color: #9c41f2 !important;
+}
+
+.fire, .fire:hover{
+    background-color: red !important;
+}
+
+.water, .water:hover{
+    background-color: deepskyblue !important;
+}
+
+.grass, .grass:hover{
+    background-color: lawngreen !important;
+}
+
+.electric, .electric:hover{
+    background-color: yellow !important;
+}
+
+.ground, .ground:hover{
+    background-color: beige !important;
+}
+
+.rock, .rock:hover{
+    background-color: sandybrown !important;
+}
+
+.psychic, .psychic:hover{
+    background-color: hotpink !important;
+}
+.ice, .ice:hover{
+    background-color: lightblue !important;
+}
+
+.bug, .bug:hover{
+    background-color: yellowgreen !important;
+}
+.ghost, .ghost:hover{
+    background-color: mediumpurple !important;
+}
+.steel, .steel:hover{
+    background-color: lightslategray !important;
+}
+
+.dragon, .dragon:hover{
+    background-color: rebeccapurple !important;
+}
+
+.dark, .dark:hover{
+    background-color: brown !important;
+}
+
+.fairy, .fairy:hover{
+    background-color: pink !important;
+}
+
+.typeButton{
+    margin-left: 10px !important;
+}

@@ -1,16 +1,11 @@
-# Weekly Notes
+npm# Weekly Notes
 ## WORK IN PROGRESS 
-![60%](https://progress-bar.dev/60)
+![80%](https://progress-bar.dev/80)
 
 Web aplication made with React made for creating quick reminder notes.
 After finishing React side I'm going to add backend (Node.js).
 
 
-
-
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 

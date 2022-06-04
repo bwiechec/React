@@ -31,9 +31,25 @@ class AddNote extends React.Component{ //TODO: COMPONENT AddNote
         })
     }
 
+
+
     submitBtnFunc = () =>{
-        this.props.addNewEvent(this.state.DateInputValue, this.state.TitleInputValue, this.state.TextInputValue);
-        this.props.changeBtnPopup();
+        //this.props.addNewEvent(this.state.DateInputValue, this.state.TitleInputValue, this.state.TextInputValue); //TODO ta linia do zmiany
+        fetch('/api/addNote', {
+            method: 'POST',
+            body: JSON.stringify({
+                dateOf: this.state.DateInputValue,
+                titleOf: this.state.TitleInputValue,
+                textOf: this.state.TextInputValue})
+            ,
+            headers: {'content-type': 'application/json'}
+        })
+            .then(res => res.json())
+            .then(resJson => {
+                console.log(resJson);
+                this.props.addNewEvent();
+                this.props.changeBtnPopup();
+            });
     }
 
     render(){
