@@ -63,13 +63,13 @@ export default function PokemonInfo() {
     //getData();
 
     return (
-        !loading ? <main style={{padding: "1rem 0", justifyContent: 'center', border: '1px solid black', width: '100%'}}>
+        !loading ? <main style={{padding: "1rem 0", justifyContent: 'center', position: "relative", width: '100%'}}>
             <div key={'management_panel'} className={'pokeManagementPanel'} style={{justifyContent: 'center'}}>
                 <div className={'prevButton'} style={{ fontSize: "40px", maxWidth: "20%", float: "left", marginLeft: "5%", justifyContent: 'center'}}>
                     <Button variant="contained"  size="medium">&larr; Previous</Button>
                 </div>
 
-                <h1 className={'pokeList'} style={{display: "inline-flex", fontFamily: "'Pokemon Solid', sans-serif", letterSpacing: "2px"}}>
+                <h1 className={'pokeList'} style={{display: "inline-flex", fontFamily: "'Flexo-Demi',arial,sans-serif"}}>
                     {pokemon['name'][0].toUpperCase() + pokemon['name'].substring(1)}
                 </h1>
 

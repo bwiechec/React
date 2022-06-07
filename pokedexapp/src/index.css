@@ -13,6 +13,14 @@ code {
     monospace;
 }
 
+footer{
+  background-color: #e2e9f1;
+  text-align: right;
+  padding: 10px;
+  bottom: 0px;
+  position: sticky;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
