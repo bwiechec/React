@@ -64,7 +64,7 @@ export default function PokemonInfo() {
 
     return (
         !loading ? <main style={{padding: "1rem 0", justifyContent: 'center', position: "relative", width: '100%'}}>
-            <div key={'management_panel'} className={'pokeManagementPanel'} style={{justifyContent: 'center'}}>
+            <div key={'management_panel'} className={'pokeManagementPanel'} style={{justifyContent: 'center', backgroundColor: "#f2f2f2", position: 'sticky', top: '0', zIndex: '1234'}}>
                 <div className={'prevButton'} style={{ fontSize: "40px", maxWidth: "20%", float: "left", marginLeft: "5%", justifyContent: 'center'}}>
                     <Button variant="contained"  size="medium">&larr; Previous</Button>
                 </div>
