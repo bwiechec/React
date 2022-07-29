@@ -1,0 +1,7 @@
+.encounter_box{
+    overflow: hidden;
+}
+
+.encounter_box:hover{
+    overflow-y: scroll;
+}

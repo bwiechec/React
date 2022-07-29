@@ -31,7 +31,7 @@ export default function PokemonEvolutions(props) {
                                 <div key={evolutionChain['chain']['species']['name'].toUpperCase()+'_div'} style={{display: "inline-table"}}>
                                     <img alt={evolutionChain['chain']['species']['name'].toUpperCase()}
                                          src={baseImgUrl+splitUrl+'.png'} style={{width:'50px', height: '50px'}}/>
-                                    <p>{evolutionChain['chain']['species']['name'][0].toUpperCase()
+                                    <p style={{fontFamily: "'Flexo-Demi',arial,sans-serif"}}>{evolutionChain['chain']['species']['name'][0].toUpperCase()
                                         + evolutionChain['chain']['species']['name'].slice(1,)}</p>
                                 </div>
                             </NavLink>)
@@ -51,7 +51,7 @@ export default function PokemonEvolutions(props) {
                                     <div key={evolvesTo['species']['name'].toUpperCase()+'_div'} style={{display: "inline-table", minHeight: "80%"}}>
                                         <img key={evolvesTo['species']['name'].toUpperCase()+'_img'} alt={evolvesTo['species']['name'].toUpperCase()}
                                              src={baseImgUrl+splitUrl+'.png'} style={{width:'50px', height: '50px'}}/>
-                                        <p key={evolvesTo['species']['name'].toUpperCase()+'_value'}>
+                                        <p style={{fontFamily: "'Flexo-Demi',arial,sans-serif"}} key={evolvesTo['species']['name'].toUpperCase()+'_value'}>
                                             {evolvesTo['species']['name'][0].toUpperCase()+evolvesTo['species']['name'].slice(1,)}
                                         </p>
                                     </div>

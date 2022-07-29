@@ -64,7 +64,7 @@ class App extends React.Component{
                 let number = this.state.pokemons[key]['url'].split('/')
                 number = number[number.length - 2];
                 list.push(
-                    <TableRow key={number}>
+                    <TableRow key={number} style={{backgroundColor: "white"}}>
                         <TableCell key={'TableCell_Number_'+number} align="center">#{number}</TableCell>
                         <TableCell key={'TableCell_Pokemon_'+number} align="center">
                             {this.state.pokemons[key]['name'][0].toUpperCase()+this.state.pokemons[key]['name'].slice(1,)}
@@ -80,8 +80,8 @@ class App extends React.Component{
             }):
             list.push(<TableRow key={'App_Div_No_Poks'}><TableCell>No pokemons found</TableCell></TableRow>);
         return (
-            <div key={'App_Div'} className="App" style={{ display: "flex" }}>
-                <div key={'TableDiv'} style={{ display: "block", padding: '1rem', border: '1px solid black' }}>
+            <div key={'App_Div'} className="App" style={{ display: "flex", flexDirection: "row", alignItems: "flex-start"}}>
+                <div key={'TableDiv'} className={"sticky"} style={{display: "block", padding: '1rem', paddingBottom: '0.1rem', top: "0",  minHeight: "90%"}}>
                     <Pagination key={'pagination'} size="large" count={Math.ceil(this.state.count / 25)} style={{justifyContent: 'center',  minWidth: "450px" }}
                             onChange={(event, page) => {this.setState({page: page, pokemons: null})}}/>
                     {!this.state.loading ?

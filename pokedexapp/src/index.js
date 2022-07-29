@@ -20,7 +20,8 @@ ReactDOM.render(
                 </Route>
             </Route>
         </Routes>
-        <footer style={{textAlign: "right"}}>Bartosz Wiecheć, 2022</footer>
+        <div style={{clear: "both"}}/>
+        <footer>Bartosz Wiecheć, 2022</footer>
     </BrowserRouter>,
   document.getElementById('root')
 );
