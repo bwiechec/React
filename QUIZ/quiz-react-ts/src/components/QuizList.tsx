@@ -20,6 +20,26 @@ const list: quizObject[] = //new Array();
     description: "test desc2",
     img: null
   },
+  {
+    title: "test",
+    description: "test desc",
+    img: null
+  },
+  {
+    title: "test2",
+    description: "test desc2",
+    img: null
+  },
+  {
+    title: "test",
+    description: "test desc",
+    img: null
+  },
+  {
+    title: "test2",
+    description: "test desc2",
+    img: null
+  },
 ];
 
 export default function QuizList(){
@@ -29,21 +49,23 @@ export default function QuizList(){
           alignItems="center"
           justifyContent="center"
           xs={8}
+          direction={{xs: "row"}}
           style={{border: "2px solid red"}}>
       {list.length > 0 ?
         list.map((quiz: quizObject) => (
           <Box key={quiz.title}
+               onClick={() => console.log(quiz.title)}
                alignItems="center"
                justifyContent="center"
                sx={{ width: "30%", marginRight: 0.5, my: 5 }}>
             {quiz.img ?
               (<img
-                style={{ width: "90%", height: 118 }}
+                style={{ width: "90%", height: "10%" }}
                 alt={quiz.title}
                 src={quiz.img}
               />)
               :
-              (<Skeleton variant="rectangular" width={"90%"} height={118} />)
+              (<Skeleton variant="rectangular" style={{marginInline: "auto"}} width={"90%"} height={"10vh"} />)
             }
             {quiz ?
               (<Box sx={{pr: 2}}>

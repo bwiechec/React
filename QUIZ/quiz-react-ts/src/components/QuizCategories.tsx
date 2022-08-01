@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {CircularProgress, Grid, Skeleton, Box} from '@mui/material/';
+import {CircularProgress, Grid, Skeleton, Box, Button} from '@mui/material/';
 
 const categories: string[] = //[];
 [
@@ -13,21 +13,19 @@ export default function QuizCategories(){
 
   return(
     <Grid item
+          container
           xs={4}
+          direction="column"
           alignItems="center"
           justifyContent="center"
           style={{border: "2px solid black"}}>
       {categories.length > 0 ?
-        <div>
-          {categories.map((category: string) =>
+          categories.map((category: string) =>
             category ?
-              (<Box>
-                <p key={category}>{category}</p>
-              </Box>)
+              (<Button key={category} style={{width: "50%"}}>{category}</Button>)
               :
               (<Skeleton/>)
-          )}
-        </div>
+          )
         :
         (<CircularProgress />)
       }
