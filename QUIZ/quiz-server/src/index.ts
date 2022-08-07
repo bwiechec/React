@@ -1,25 +1,41 @@
-const express = require('express')
-const app = express();
-const path = require('path')
-const cors = require('cors')
+import express from 'express';
+import path from 'path';
+import cors from "cors";
+import userResolv from './config/UserResolv';
+import bodyParser from "body-parser";
 require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
+
 const port = 4000;
+const app = express();
 
-app.use(cors());
-app.get('/', (req, res) => {
-  res.send({
-    status: 1,
-    response: "Welcome to quiz-server"
+
+(async () => {
+  app.use(cors());
+  app.use(bodyParser.json())
+  app.use(bodyParser.urlencoded({ extended: true }))
+  app.get('/', (_req, res) => {
+    res.send({
+      status: 1,
+      response: "Welcome to quiz-server",
+    });
   });
-});
 
-app.post('/login', (req, res) => {
-  res.send({
-    status: 1,
-    response: "you've reached login endpoint!"
-  });
-})
+  app.post('/login', userResolv.login, (req, res) => {
+    console.log(req.body);
+    res.send({
+      status: 1,
+      response: "you've reached login endpoint!"
+    });
+  })
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}!`);
-});
+  app.post('/register', userResolv.registerUser, (_req, res) => {
+    res.send({
+      status: 1,
+      response: "you've reached register endpoint!"
+    });
+  })
+
+  app.listen(port, () => {
+    console.log(`Example app listening on port ${port}!`);
+  })
+})()

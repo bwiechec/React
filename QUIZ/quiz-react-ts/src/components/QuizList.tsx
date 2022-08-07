@@ -65,7 +65,7 @@ export default function QuizList(){
                 src={quiz.img}
               />)
               :
-              (<Skeleton variant="rectangular" style={{marginInline: "auto"}} width={"90%"} height={"10vh"} />)
+              (<Skeleton variant="rectangular" style={{marginInline: "auto"}} sx={{width: {xs: "90%", md: "50%"}}} height={"10vh"} />)
             }
             {quiz ?
               (<Box sx={{pr: 2}}>
