@@ -2,6 +2,7 @@
 import {database} from './database';
 import {Request} from "express";
 import { hash, compare } from 'bcryptjs';
+import {createAccessToken} from "../utils/token";
 
 
 export default class userResolv {
@@ -15,29 +16,46 @@ export default class userResolv {
     database.pool.execute('SELECT * FROM `User` WHERE `user_name` = ? OR `email` = ?',
       [username, username],
       async (err:any, user:any) => {
-        if(err) throw err;
+        if(err){
+          res.send({
+            status: 0,
+            response: err.sqlMessage,
+            errCode: err.errno
+          })
+          return 0;
+        }
 
         console.log(await hash(password, 12));
 
 
         if (user.length === 0) {
-          throw new Error("could not find user");
+          res.send({
+            status: 0,
+            response: "USER NOT FOUND!"
+          })
+          return 0;
         }
 
-        console.log(password + ' ' + user[0].user_password)
+        console.log(user[0])
         const valid = await compare(password, user[0].user_password);
         console.log(valid)
         if(!valid){
-          throw new Error("Wrong password");
+          res.send({
+            status: 0,
+            response: "INVALID PASSWORD!"
+          })
+          return 0;
         }
         //create token
         res.send({
           status: 1,
-          response: "SUCCESS!"
+          response: "SUCCESS!",
+          token: createAccessToken(user[0].user_id)
         })
+        return 1;
       })
 
-    return 'xd';
+    return 0;
   };
 
   static registerUser = async (req:Request, res:any) => {
@@ -59,15 +77,22 @@ export default class userResolv {
         'VALUES (?, ?, ?, ?)',
       [username, encryptedPassword, email, new Date(birthdate)],
       (err:any, _user:any) => {
-        if(err) throw err;
+        if(err){
+          res.send({
+            status: 0,
+            response: err.sqlMessage,
+            errCode: err.errno
+          })
+          return 0;
+        }
 
         res.send({
           status: 1,
           response: "SUCCESS!"
         })
-
+        return 1;
       })
 
-    return 'XD';
+    return 0;
   }
 }

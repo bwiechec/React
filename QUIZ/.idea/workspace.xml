@@ -36,7 +36,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="ts.external.directory.path" value="D:\GitHub\React\QUIZ\quiz-react-ts\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="D:\GitHub\React\QUIZ\quiz-server\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -60,6 +60,7 @@
       <workItem from="1659454117273" duration="1348000" />
       <workItem from="1659627721189" duration="6962000" />
       <workItem from="1659890389767" duration="10308000" />
+      <workItem from="1660065418127" duration="3509000" />
     </task>
     <servers />
   </component>

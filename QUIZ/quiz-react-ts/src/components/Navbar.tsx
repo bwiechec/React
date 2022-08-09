@@ -14,9 +14,27 @@ export default function Navbar(){
   const printToken = () => {
     token = getAccessToken();
     console.log('TOKEN:' + token);
-    if(token === 'habababa'){
-      setAccessToken('huhuhuh')
-    }
+  }
+
+  const loginUser = () => {
+    fetch('http://127.0.0.1:4000/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      redirect: 'follow',
+      mode: 'cors',
+      body: JSON.stringify({
+        username: 'test1',
+        password: 'test1'
+      })
+    })
+      .then(res => res.json())
+      .then(resJson => {
+        if(resJson.status === 1){
+          setAccessToken(resJson.token)
+        }
+      })
   }
 
   return (
@@ -33,7 +51,8 @@ export default function Navbar(){
               QUIZ
             </a>
           </Typography>
-          <Button color="inherit" onClick={printToken}>Login</Button>
+          <Button color="inherit" onClick={printToken}>Get Token</Button>
+          <Button color="inherit" onClick={loginUser}>Login</Button>
         </Toolbar>
       </AppBar>
     </Box>

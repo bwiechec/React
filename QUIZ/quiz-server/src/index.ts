@@ -3,11 +3,12 @@ import path from 'path';
 import cors from "cors";
 import userResolv from './config/UserResolv';
 import bodyParser from "body-parser";
+import {verifyToken} from "./utils/verifyToken";
+import {Response} from "express/ts4.0";
 require('dotenv').config({ path: path.resolve(__dirname, '../.env') });
 
 const port = 4000;
 const app = express();
-
 
 (async () => {
   app.use(cors());
@@ -33,6 +34,13 @@ const app = express();
       status: 1,
       response: "you've reached register endpoint!"
     });
+  })
+
+  app.post('/userList', verifyToken, (_req:any, res:Response) => {
+    res.send({
+      status: 1,
+      response: "USER_ID"
+    })
   })
 
   app.listen(port, () => {

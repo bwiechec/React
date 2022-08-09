@@ -16,14 +16,14 @@ export default function Content() {
   const [loginData, setLoginData] = useState<string>()
 
   const getLoginData = async () => {
-    const data = await fetch('http://localhost:4000/login',{method: "POST"})
-    const dataJson = await data.json();
-    return(dataJson.response)
+    // const data = await fetch('http://localhost:4000/login',{method: "POST"})
+    // const dataJson = await data.json();
+    // return(dataJson.response)
   }
 
-  useEffect(()=>{
-    getLoginData().then(r => setLoginData(r));
-  }, [])
+  // useEffect(()=>{
+  //   getLoginData().then(r => setLoginData(r));
+  // }, [])
 
   return (
     <Grid
