@@ -6,8 +6,9 @@ import * as Icons from '@mui/icons-material';
 import {setAccessToken} from '../utils/token';
 import QuizList from "./QuizList";
 import QuizCategories from "./QuizCategories";
+import {contentProps} from "../interfaces/interfaces";
 
-export default function Content() {
+export default function Content(props:contentProps) {
 
   setAccessToken('habababa');
 

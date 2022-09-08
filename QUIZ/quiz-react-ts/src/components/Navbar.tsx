@@ -6,35 +6,23 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import {getAccessToken, setAccessToken} from '../utils/token';
 import {useEffect} from "react";
+import {contentProps} from "../interfaces/interfaces";
 
-export default function Navbar(){
+export default function Navbar(props:contentProps){
 
   let token:string = getAccessToken();
 
   const printToken = () => {
     token = getAccessToken();
-    console.log('TOKEN:' + token);
+    console.log('TOKEN:' + token + ' action: '+props.currentAction);
   }
 
-  const loginUser = () => {
-    fetch('http://127.0.0.1:4000/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      redirect: 'follow',
-      mode: 'cors',
-      body: JSON.stringify({
-        username: 'test1',
-        password: 'test1'
-      })
-    })
-      .then(res => res.json())
-      .then(resJson => {
-        if(resJson.status === 1){
-          setAccessToken(resJson.token)
-        }
-      })
+  const goToMainPage = () => {
+    props.setCurrentAction('main')
+  }
+
+  const goToLoginUser = () => {
+    props.setCurrentAction('login')
   }
 
   return (
@@ -47,12 +35,13 @@ export default function Navbar(){
                 color: 'inherit',
                 textDecoration: 'inherit'
                 }}
+               onClick={goToMainPage}
             >
               QUIZ
             </a>
           </Typography>
           <Button color="inherit" onClick={printToken}>Get Token</Button>
-          <Button color="inherit" onClick={loginUser}>Login</Button>
+          <Button color="inherit" onClick={goToLoginUser}>Login</Button>
         </Toolbar>
       </AppBar>
     </Box>
