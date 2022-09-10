@@ -22,7 +22,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2CeqkEvjhStziIxksmzrg4dytky" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -64,6 +64,7 @@
       <workItem from="1660074333669" duration="356000" />
       <workItem from="1660670135470" duration="2191000" />
       <workItem from="1662649389442" duration="8355000" />
+      <workItem from="1662813557821" duration="7408000" />
     </task>
     <servers />
   </component>

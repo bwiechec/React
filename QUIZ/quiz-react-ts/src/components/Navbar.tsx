@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import {getAccessToken, setAccessToken} from '../utils/token';
 import {useEffect} from "react";
 import {contentProps} from "../interfaces/interfaces";
+import {getLogin, setLogin} from "../utils/user";
 
 export default function Navbar(props:contentProps){
 
@@ -41,7 +42,12 @@ export default function Navbar(props:contentProps){
             </a>
           </Typography>
           <Button color="inherit" onClick={printToken}>Get Token</Button>
-          <Button color="inherit" onClick={goToLoginUser}>Login</Button>
+          { getLogin() === '' ?
+            <Button color="inherit" onClick={goToLoginUser}>Login</Button>
+            :
+            <p color="inherit">Hello {getLogin()}</p>
+          }
+
         </Toolbar>
       </AppBar>
     </Box>
