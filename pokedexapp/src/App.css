@@ -42,3 +42,8 @@
   position: sticky;
   position: -webkit-sticky;
 }
+
+.stat_box{
+  box-shadow: 5px 5px 3px 0 rgba(0, 0, 0, 0.05);
+  background-color: #FFFFFF;
+}
