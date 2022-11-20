@@ -70,7 +70,7 @@ export default function PokemonInfo() {
   }
 
   return (
-    <main style={{padding: "1rem 0", justifyContent: 'center', position: "relative", width: '100%'}}>
+    <main>
 
       <ManagementPanel
         pokemon={pokemon}

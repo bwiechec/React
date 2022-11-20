@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start
 }
 
 .App-logo {
@@ -46,4 +49,47 @@
 .stat_box{
   box-shadow: 5px 5px 3px 0 rgba(0, 0, 0, 0.05);
   background-color: #FFFFFF;
+}
+
+a {
+  text-decoration: none;
+}
+
+.MuiTable-root {
+  transition: max-width 1s, height 1s;
+}
+
+.show_table {
+  opacity: 0;
+  width: 0;
+  padding: 0;
+}
+
+.pokemon_table {
+  display: block;
+  padding: 1rem 1rem 0.1rem;
+  top: 0;
+  opacity: 1;
+  max-width: 450px;
+  min-height: 90%;
+  transition: all 500ms ease-in;
+}
+
+.pokemon_table.hidden{
+  max-width: 0;
+  opacity: 0;
+  transition: all 500ms ease-in;
+}
+
+.hidden{
+  max-width: 0;
+  transition: all 500ms ease-in;
+}
+
+.pokemon_table table.hidden *, .pokemon_table nav.hidden *{
+  max-width: 0;
+  width: 0;
+  opacity: 0;
+  display: none;
+  transition: all 500ms ease-in;
 }

@@ -2,3 +2,10 @@
     box-shadow: 5px 5px 3px 0 rgba(0, 0, 0, 0.05);
     background-color: #FFFFFF;
 }
+
+main {
+    padding: 1rem 0;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}

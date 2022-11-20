@@ -9,15 +9,15 @@ import PokemonInfo from "./routes/PokemonInfo/PokemonInfo";
 ReactDOM.render(
   <BrowserRouter>
     {/*<nav style={{textAlign: "center", fontSize: '50px'}}>POKEDEX</nav>*/}
+    <App/>
     <Routes key={'Routes'}>
-      <Route key={'main_route'} path="/" element={<App/>}>
+      {/*<Route key={'main_route'} path="/" element={<App/>}>*/}
         <Route key={'Route_pokemon'} path="/pokemon" element={<PokemonInfo/>}>
           <Route key={'Route_pokemon_id'} path=":pokemon" element={<PokemonInfo/>}/>
         </Route>
-      </Route>
+      {/*</Route>*/}
     </Routes>
     <div style={{clear: "both"}}/>
-    <footer style={{position: 'fixed', padding: '1%', width: '98%'}}>Bartosz Wiecheć, 2022</footer>
   </BrowserRouter>,
   document.getElementById('root')
 );

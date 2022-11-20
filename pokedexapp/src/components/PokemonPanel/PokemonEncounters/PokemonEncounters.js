@@ -55,16 +55,23 @@ export default function PokemonEncounters(props) {
 
   if (loading) {
     return (
-      <CircularProgress key={'circular_progress'} style={{padding: "1%"}}/>
+      <div key={'PokemonEncounters'} className={"pokeEncounters "+ classes['poke_encounters']}>
+        <div key={'PokemonEncounters_component'}
+             className={'stat_box '+ classes['stat-box']}
+        >
+          <CircularProgress key={'circular_progress'} style={{padding: "1%"}}/>
+        </div>
+      </div>
     )
   }
 
   return (
-    <div key={'PokemonEncounters'} className={"pokeEncounters"} style={{marginTop: "5%"}}>
-      <div key={'PokemonEncounters_component'} className={'stat_box'}
-           style={{display: "inline-block", minWidth: '90%'}}>
-        <h4 style={{textAlign: 'left', paddingLeft: '2%'}}>Encounters:</h4>
-        <List key={'list'} style={{width: '100%', maxHeight: "400px"}}
+    <div key={'PokemonEncounters'} className={"pokeEncounters "+ classes['poke_encounters']}>
+      <div key={'PokemonEncounters_component'}
+           className={'stat_box '+ classes['stat-box']}
+      >
+        <h4>Encounters:</h4>
+        <List key={'list'}
               className={classes.encounter_box}>{encounterChainBody}</List>
       </div>
     </div>
