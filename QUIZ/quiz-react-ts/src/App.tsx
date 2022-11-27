@@ -3,6 +3,11 @@ import './App.css';
 import Navbar from './components/Navbar'
 import Content from './components/Content'
 import LoginPage from './components/LoginPage'
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 
 function App() {
 
@@ -20,9 +25,12 @@ function App() {
     <div className="App">
       <Navbar currentAction={currentAction ? currentAction : ''} setCurrentAction = {changeActionByChild} />
 
-      { currentAction === 'main' ? <Content currentAction={currentAction} setCurrentAction = {changeActionByChild} /> : null }
-      { currentAction === 'login' ? <LoginPage currentAction={currentAction} setCurrentAction = {changeActionByChild} /> : null }
-      { currentAction === 'main' ? <Content currentAction={currentAction} setCurrentAction = {changeActionByChild} /> : null }
+      <BrowserRouter>
+        <Routes key={'Routes'}>
+          <Route key={'main_route'} path="/" element={<Content />} />
+          <Route key={'login_rote'} path="/login" element={<LoginPage />} />
+        </Routes>
+      </BrowserRouter>
 
     </div>
   );

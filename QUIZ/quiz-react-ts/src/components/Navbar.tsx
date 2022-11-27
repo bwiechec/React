@@ -8,6 +8,9 @@ import {getAccessToken, setAccessToken} from '../utils/token';
 import {useEffect} from "react";
 import {contentProps} from "../interfaces/interfaces";
 import {getLogin, setLogin} from "../utils/user";
+import {
+  NavLink
+} from "react-router-dom";
 
 export default function Navbar(props:contentProps){
 
@@ -41,13 +44,19 @@ export default function Navbar(props:contentProps){
               QUIZ
             </a>
           </Typography>
-          <Button color="inherit" onClick={printToken}>Get Token</Button>
-          { getLogin() === '' ?
-            <Button color="inherit" onClick={goToLoginUser}>Login</Button>
-            :
-            <p color="inherit">Hello {getLogin()}</p>
-          }
-
+          <div className={'actions'} style={{position: 'absolute', right: '0'}}>
+            <Button color="inherit" onClick={printToken}>Get Token</Button>
+            { getLogin() === '' ?
+              <a href="/login"
+                 style={{
+                   color: 'inherit',
+                   textDecoration: 'inherit'
+                 }}
+              ><Button color="inherit">Login</Button></a>
+              :
+              <p color="inherit">Hello {getLogin()}</p>
+            }
+          </div>
         </Toolbar>
       </AppBar>
     </Box>

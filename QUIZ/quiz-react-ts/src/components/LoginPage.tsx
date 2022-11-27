@@ -5,7 +5,7 @@ import {FormGroup , TextField, Button} from "@mui/material";
 import {getLogin, setLogin} from "../utils/user";
 
 
-export default function Content(props:contentProps) {
+export default function Content() {
 
   const [userNameError, setUserNameError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);

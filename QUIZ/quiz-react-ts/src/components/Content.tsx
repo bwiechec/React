@@ -8,7 +8,7 @@ import QuizList from "./QuizList";
 import QuizCategories from "./QuizCategories";
 import {contentProps} from "../interfaces/interfaces";
 
-export default function Content(props:contentProps) {
+export default function Content() {
 
   setAccessToken('habababa');
 
