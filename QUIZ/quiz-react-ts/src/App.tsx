@@ -8,6 +8,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
+import QuizList from "./components/QuizList";
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
       <BrowserRouter>
         <Routes key={'Routes'}>
           <Route key={'main_route'} path="/" element={<Content />} />
+          <Route key={'category'} path="/category/:category" element={<QuizList />} />
           <Route key={'login_rote'} path="/login" element={<LoginPage />} />
         </Routes>
       </BrowserRouter>

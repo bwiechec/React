@@ -1,9 +1,7 @@
-let login = "";
-
 export const setLogin = (s: string) => {
-  login = s;
+  localStorage.setItem('login', s);
 };
 
-export const getLogin = () => {
-  return login;
+export const getLogin = ():string => {
+  return localStorage.getItem('login') ?? '';
 };

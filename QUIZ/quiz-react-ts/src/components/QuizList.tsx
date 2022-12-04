@@ -57,7 +57,7 @@ export default function QuizList(){
                onClick={() => console.log(quiz.title)}
                alignItems="center"
                justifyContent="center"
-               sx={{ width: "30%", marginRight: 0.5, my: 5 }}>
+               sx={{ width: {xs: "80%", sm: "40%", xl: "25%"}, marginRight: 0.5, my: 5 }}>
             {quiz.img ?
               (<img
                 style={{ width: "90%", height: "10%" }}
@@ -65,7 +65,7 @@ export default function QuizList(){
                 src={quiz.img}
               />)
               :
-              (<Skeleton variant="rectangular" style={{marginInline: "auto"}} sx={{width: {xs: "90%", md: "50%"}}} height={"10vh"} />)
+              (<Skeleton variant="rectangular" style={{marginInline: "auto"}} sx={{width: {xs: "90%", md: "90%", xl: '65%'}}} height={"10vh"} />)
             }
             {quiz ?
               (<Box sx={{pr: 2}}>

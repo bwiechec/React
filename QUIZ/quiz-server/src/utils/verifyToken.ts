@@ -12,7 +12,9 @@ export const verifyToken = async (req:Request, res:Response, next:any) => {
     throw new Error("not authenticated");
   }
   try {
+    console.log(authorization);
     const token = authorization.split(" ")[1];
+    console.log(token);
     verify(token, process.env.ACCESS_TOKEN_SECRET!);
   } catch (err) {
     res.send({

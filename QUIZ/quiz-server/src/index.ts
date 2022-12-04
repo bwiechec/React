@@ -43,6 +43,13 @@ const app = express();
     })
   })
 
+  app.post('/categoryList', verifyToken, (_req:any, res:Response) => {
+    res.send({
+      status: 1,
+      response: "CATEGORY_LIST"
+    })
+  })
+
   app.listen(port, () => {
     console.log(`Example app listening on port ${port}!`);
   })

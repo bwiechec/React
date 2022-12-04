@@ -10,8 +10,6 @@ import {contentProps} from "../interfaces/interfaces";
 
 export default function Content() {
 
-  setAccessToken('habababa');
-
   const loading:boolean = true;
 
   const [loginData, setLoginData] = useState<string>()
@@ -30,10 +28,10 @@ export default function Content() {
     <Grid
       container
       className={"content"}
-      style={{marginTop: "1%"}}
+      style={{marginTop: "1%", alignItems: "center", justifyContent: "center", height: "100%"}}
       columnSpacing={{ xs: 1, sm: 2, md: 3 }}
     >
-      <QuizList />
+      {/*<QuizList />*/}
       <QuizCategories />
     </Grid>
   );

@@ -13,8 +13,11 @@ export default function Content() {
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
 
+  const [loginMessage, setLoginMessage] = useState('');
+
   const loginUser = (login: string, pasword: string) => {
     console.log('submit')
+    setLoginMessage('');
     fetch('http://127.0.0.1:4000/login', {
       method: 'POST',
       headers: {
@@ -34,6 +37,14 @@ export default function Content() {
           setAccessToken(resJson.token)
           setLogin(login)
           //props.setCurrentAction('main')
+          window.location.replace('/');
+        }
+        else {
+          resJson.errCode
+            ?
+              setLoginMessage('Internal server error occurred')
+            :
+              setLoginMessage(resJson.response);
         }
       })
   }
@@ -85,6 +96,12 @@ export default function Content() {
           margin="normal"
           onChange={updateInsertedPassword}
         />
+          <span style={{
+            color: 'red'
+          }}
+          >
+            {loginMessage}
+          </span>
         <Button
           variant="contained"
           color="primary"

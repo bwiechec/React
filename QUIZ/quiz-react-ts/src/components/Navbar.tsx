@@ -21,12 +21,9 @@ export default function Navbar(props:contentProps){
     console.log('TOKEN:' + token + ' action: '+props.currentAction);
   }
 
-  const goToMainPage = () => {
-    props.setCurrentAction('main')
-  }
-
-  const goToLoginUser = () => {
-    props.setCurrentAction('login')
+  const clearLocalStorage = () => {
+    localStorage.clear();
+    window.location.reload();
   }
 
   return (
@@ -39,13 +36,12 @@ export default function Navbar(props:contentProps){
                 color: 'inherit',
                 textDecoration: 'inherit'
                 }}
-               onClick={goToMainPage}
             >
               QUIZ
             </a>
           </Typography>
-          <div className={'actions'} style={{position: 'absolute', right: '0'}}>
-            <Button color="inherit" onClick={printToken}>Get Token</Button>
+          <div className={'actions'} style={{position: 'absolute', right: '1rem'}}>
+            {/*<Button color="inherit" onClick={printToken}>Get Token</Button>*/}
             { getLogin() === '' ?
               <a href="/login"
                  style={{
@@ -54,7 +50,26 @@ export default function Navbar(props:contentProps){
                  }}
               ><Button color="inherit">Login</Button></a>
               :
-              <p color="inherit">Hello {getLogin()}</p>
+              <p
+                style={{
+                  display: 'inline-flex',
+                  color: "inherit",
+                  alignItems: "center",
+                }}
+              >
+                Hello {getLogin()}
+                <Button
+                  style={{
+                    color: 'inherit',
+                    textDecoration: 'inherit'
+                  }}
+                  onClick = {
+                    () => clearLocalStorage() //TODO change to normal logout
+                  }
+                >
+                  (Logout)
+                </Button>
+              </p>
             }
           </div>
         </Toolbar>
