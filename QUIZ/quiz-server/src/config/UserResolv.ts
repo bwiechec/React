@@ -27,7 +27,6 @@ export default class userResolv {
 
         console.log(await hash(password, 12));
 
-
         if (user.length === 0) {
           res.send({
             status: 0,

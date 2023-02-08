@@ -3,34 +3,26 @@ import './App.css';
 import Navbar from './components/Navbar'
 import Content from './components/Content'
 import LoginPage from './components/LoginPage'
+import QuizCreate from './components/QuizCreate'
 import {
   BrowserRouter,
   Routes,
   Route
 } from "react-router-dom";
-import QuizList from "./components/QuizList";
+import QuizList from "./components/quizList/QuizList";
 
 function App() {
 
-  const [currentAction, setCurrentAction] = useState<string>();
-
-  useEffect(()=>{
-    setCurrentAction('main')
-  }, [])
-
-  const changeActionByChild = (newAction: string) => {
-    setCurrentAction(newAction);
-  }
-
   return (
     <div className="App">
-      <Navbar currentAction={currentAction ? currentAction : ''} setCurrentAction = {changeActionByChild} />
+      <Navbar />
 
       <BrowserRouter>
         <Routes key={'Routes'}>
           <Route key={'main_route'} path="/" element={<Content />} />
-          <Route key={'category'} path="/category/:category" element={<QuizList />} />
+          <Route key={'category'} path="/category/:categoryId" element={<QuizList />} />
           <Route key={'login_rote'} path="/login" element={<LoginPage />} />
+          <Route key={'quiz_create_route'} path="/quiz/create" element={<QuizCreate />} />
         </Routes>
       </BrowserRouter>
 

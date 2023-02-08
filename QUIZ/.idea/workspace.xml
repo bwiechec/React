@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5c547c7a-8246-4787-8c38-1c49e4009031" name="Changes" comment="" />
+    <list default="true" id="5c547c7a-8246-4787-8c38-1c49e4009031" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/quiz-react-ts/src/components/quizList/QuizList.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz-react-ts/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/quiz-react-ts/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz-react-ts/src/components/Content.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/quiz-react-ts/src/components/Content.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz-react-ts/src/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/quiz-react-ts/src/components/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz-react-ts/src/components/QuizCategories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/quiz-react-ts/src/components/quizCategories/QuizCategories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz-react-ts/src/components/QuizList.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz-react-ts/src/interfaces/interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/quiz-react-ts/src/interfaces/interfaces.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz-server/src/config/UserResolv.ts" beforeDir="false" afterPath="$PROJECT_DIR$/quiz-server/src/config/UserResolv.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz-server/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/quiz-server/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz-server/src/utils/verifyToken.ts" beforeDir="false" afterPath="$PROJECT_DIR$/quiz-server/src/utils/verifyToken.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -45,11 +57,13 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="ts.external.directory.path" value="D:\GitHub\React\QUIZ\quiz-react-ts\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="D:\GitHub\React\QUIZ\quiz-server\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GitHub\React\QUIZ\quiz-react-ts\src\components\quizCategories" />
+      <recent name="D:\GitHub\React\QUIZ\quiz-react-ts\src\components\quizList" />
       <recent name="D:\GitHub\React\QUIZ\quiz-server\src\config" />
     </key>
   </component>
@@ -79,10 +93,29 @@
       <workItem from="1669754400118" duration="2801000" />
       <workItem from="1669829046475" duration="2886000" />
       <workItem from="1670182326981" duration="4218000" />
+      <workItem from="1670519870402" duration="5513000" />
+      <workItem from="1670666027138" duration="7488000" />
+      <workItem from="1670687394830" duration="4260000" />
+      <workItem from="1672329742441" duration="1803000" />
+      <workItem from="1674062328452" duration="2691000" />
+      <workItem from="1675192395945" duration="3435000" />
+      <workItem from="1675791640818" duration="2506000" />
+      <workItem from="1675872845911" duration="530000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
