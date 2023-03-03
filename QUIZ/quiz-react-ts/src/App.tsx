@@ -3,7 +3,7 @@ import './App.css';
 import Navbar from './components/Navbar'
 import Content from './components/Content'
 import LoginPage from './components/LoginPage'
-import QuizCreate from './components/QuizCreate'
+import QuizCreate from './components/quizCreate/QuizCreate'
 import {
   BrowserRouter,
   Routes,

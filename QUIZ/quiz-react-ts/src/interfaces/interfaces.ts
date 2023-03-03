@@ -21,3 +21,9 @@ export interface quizListInterface {
   userName: string,
   quizDescription: string
 }
+
+export interface quizAnswerInterface {
+  quizId: number | null,
+  text: string,
+  isCorrect: boolean
+}

@@ -11,11 +11,13 @@ import {
 } from "@mui/material";
 import AddIcon from '@mui/icons-material/Add';
 import React, {useEffect, useState} from "react";
-import {categoryListInterface} from "../interfaces/interfaces";
-import {getAccessToken} from "../utils/token";
+import {categoryListInterface, quizAnswerInterface} from "../../interfaces/interfaces";
+import {getAccessToken} from "../../utils/token";
+import QuizAnswer from "./QuizAnswer";
 
 export default function QuizCreate(){
 
+  const [answerList, setAnswerList] = useState<Array<quizAnswerInterface>>();
   const [categoryList, setCategoryList] = useState<Array<categoryListInterface>>();
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
@@ -43,6 +45,8 @@ export default function QuizCreate(){
   if(isLoading || categoryList === undefined){
     return <CircularProgress />
   }
+
+  console.log(answerList);
 
   return(
     <div>
@@ -81,8 +85,25 @@ export default function QuizCreate(){
           // onChange={updateInsertedUserName}
         />
 
+        <>
+        {
+          answerList ? answerList.map((answer: quizAnswerInterface) => {
+            (<QuizAnswer answer={answer}/>)
+          }) : ''
+        }
+        </>
+
         <div style={{display: 'flex', justifyContent: 'flex-end'}}>
-          <Fab color="primary" aria-label="add" style={{float: 'left'}} variant="extended">
+          <Fab color="primary" aria-label="add" style={{float: 'left'}} variant="extended" onClick={() => {
+            let answer = {
+              quizId: null,
+              text: '',
+              isCorrect: false
+            } as quizAnswerInterface;
+            console.log(answerList);
+
+            setAnswerList(answerList ? [...answerList, answer] : [answer]);
+          }}>
             <AddIcon />
             Add answer
           </Fab>

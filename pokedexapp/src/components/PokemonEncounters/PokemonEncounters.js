@@ -51,6 +51,8 @@ export default function PokemonEncounters(props) {
     return loading ?
         <CircularProgress key={'circular_progress'} style={{padding:"1%"}}/>
         :
-        <List key={'list'} style={{ width: '100%', maxHeight:"400px"}} className={classes.encounter_box}>{encounterChainBody}</List>
+        <List key={'list'} style={{ width: '100%', maxHeight:"400px"}} className={classes.encounter_box}>
+          {encounterChainBody}
+        </List>
         //<List>{encounterChainBody}</List>
 }

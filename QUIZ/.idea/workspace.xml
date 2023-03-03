@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c547c7a-8246-4787-8c38-1c49e4009031" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/quiz-react-ts/src/components/quizList/QuizList.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quiz-react-ts/src/components/quizCreate/QuizAnswer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/quiz-react-ts/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/quiz-react-ts/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz-react-ts/src/components/Content.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/quiz-react-ts/src/components/Content.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/quiz-react-ts/src/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/quiz-react-ts/src/components/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz-react-ts/src/components/QuizCategories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/quiz-react-ts/src/components/quizCategories/QuizCategories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz-react-ts/src/components/QuizList.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz-react-ts/src/components/QuizCreate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/quiz-react-ts/src/components/quizCreate/QuizCreate.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz-react-ts/src/components/quizCategories/QuizCategories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/quiz-react-ts/src/components/quizCategories/QuizCategories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz-react-ts/src/components/quizList/QuizList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/quiz-react-ts/src/components/quizList/QuizList.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/quiz-react-ts/src/interfaces/interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/quiz-react-ts/src/interfaces/interfaces.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz-server/src/config/UserResolv.ts" beforeDir="false" afterPath="$PROJECT_DIR$/quiz-server/src/config/UserResolv.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz-server/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/quiz-server/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz-server/src/utils/verifyToken.ts" beforeDir="false" afterPath="$PROJECT_DIR$/quiz-server/src/utils/verifyToken.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pokedexapp/src/components/PokemonEncounters/PokemonEncounters.js" beforeDir="false" afterPath="$PROJECT_DIR$/../pokedexapp/src/components/PokemonEncounters/PokemonEncounters.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +20,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="JavaScript File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -54,14 +53,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/react-assessment" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="ts.external.directory.path" value="D:\GitHub\React\QUIZ\quiz-server\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="D:\GitHub\React\QUIZ\quiz-react-ts\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GitHub\React\QUIZ\quiz-react-ts\src\components\quizCreate" />
       <recent name="D:\GitHub\React\QUIZ\quiz-react-ts\src\components\quizCategories" />
       <recent name="D:\GitHub\React\QUIZ\quiz-react-ts\src\components\quizList" />
       <recent name="D:\GitHub\React\QUIZ\quiz-server\src\config" />
@@ -100,7 +100,12 @@
       <workItem from="1674062328452" duration="2691000" />
       <workItem from="1675192395945" duration="3435000" />
       <workItem from="1675791640818" duration="2506000" />
-      <workItem from="1675872845911" duration="530000" />
+      <workItem from="1675872845911" duration="3583000" />
+      <workItem from="1676547144333" duration="843000" />
+      <workItem from="1676548596826" duration="663000" />
+      <workItem from="1676815188224" duration="886000" />
+      <workItem from="1677608409184" duration="671000" />
+      <workItem from="1677865127156" duration="3688000" />
     </task>
     <servers />
   </component>
