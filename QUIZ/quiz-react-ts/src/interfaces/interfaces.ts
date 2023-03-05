@@ -23,7 +23,13 @@ export interface quizListInterface {
 }
 
 export interface quizAnswerInterface {
-  quizId: number | null,
+  questionId: number | null,
   text: string,
   isCorrect: boolean
+}
+
+export interface quizQuestionInterface {
+  quizId: number | null,
+  text: string,
+  quizAnswerList: quizAnswerInterface[]
 }

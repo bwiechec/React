@@ -7,18 +7,20 @@ import {
   Select,
   FormControl,
   CircularProgress,
-  Fab
+  Fab, SelectChangeEvent
 } from "@mui/material";
 import AddIcon from '@mui/icons-material/Add';
-import React, {useEffect, useState} from "react";
-import {categoryListInterface, quizAnswerInterface} from "../../interfaces/interfaces";
+import React, {ChangeEvent, useEffect, useState} from "react";
+import {categoryListInterface, quizAnswerInterface, quizQuestionInterface} from "../../interfaces/interfaces";
 import {getAccessToken} from "../../utils/token";
 import QuizAnswer from "./QuizAnswer";
+import QuizQuestion from "./QuizQuestion";
 
 export default function QuizCreate(){
 
-  const [answerList, setAnswerList] = useState<Array<quizAnswerInterface>>();
-  const [categoryList, setCategoryList] = useState<Array<categoryListInterface>>();
+  const [questionList, setQuestionList] = useState<Array<quizQuestionInterface>>();
+  const [categoryList, setCategoryList] = useState<Array<categoryListInterface>>([]);
+  const [categorySelected, setCategorySelected] = useState<number>();
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
@@ -33,8 +35,9 @@ export default function QuizCreate(){
     })
       .then(res => res.json())
       .then(resJson => {
-        setIsLoading(false);
         setCategoryList(resJson.response.quizCategoryList);
+        setCategorySelected(resJson.response.quizCategoryList[0].categoryId);
+        setIsLoading(false);
         console.log(resJson);
       });
   }, [])
@@ -46,8 +49,21 @@ export default function QuizCreate(){
     return <CircularProgress />
   }
 
-  console.log(answerList);
+  console.log(questionList);
 
+  const handleChange = (event: SelectChangeEvent<number>) => {
+    //setPassword(value);
+    if(typeof event.target.value === "number")
+      setCategorySelected(event.target.value)
+  }
+
+  const updateQuestion = (index: number, question: quizQuestionInterface) => {
+    if(!questionList) return;
+
+    questionList[index] = question;
+
+    setQuestionList([...questionList]);
+  }
   return(
     <div>
       <FormGroup sx={{maxWidth: "35rem", marginInline: "auto"}}>
@@ -65,12 +81,13 @@ export default function QuizCreate(){
           <Select
             labelId="quiz-category-select-label"
             id="quiz-category-select"
-            // value={age}
+            defaultValue={categorySelected}
+            value={categorySelected}
             label="Quiz category"
-            //onChange={handleChange}
+            onChange={handleChange}
           >
             {categoryList?.map((category: categoryListInterface) =>
-                (<MenuItem value={category.categoryId}>{category.categoryName}</MenuItem>)
+                (<MenuItem value={category.categoryId} selected={categorySelected === category.categoryId}>{category.categoryName}</MenuItem>)
               )
             }
           </Select>
@@ -87,25 +104,45 @@ export default function QuizCreate(){
 
         <>
         {
-          answerList ? answerList.map((answer: quizAnswerInterface) => {
-            (<QuizAnswer answer={answer}/>)
+          questionList ? questionList.map((question: quizQuestionInterface, index) => {
+            return (<QuizQuestion
+              quizQuestion={question}
+              questionIndex={index}
+              updateQuestion={updateQuestion}
+            />)
           }) : ''
         }
         </>
 
         <div style={{display: 'flex', justifyContent: 'flex-end'}}>
-          <Fab color="primary" aria-label="add" style={{float: 'left'}} variant="extended" onClick={() => {
-            let answer = {
+          <Fab color="primary" aria-label="add" style={{float: 'left', marginBottom: "2rem"}} variant="extended" onClick={() => {
+
+            let question = {
               quizId: null,
               text: '',
-              isCorrect: false
-            } as quizAnswerInterface;
-            console.log(answerList);
+              quizAnswerList: [
+                {
+                  text: '',
+                  questionId: questionList?.length ?? 0,
+                  isCorrect: true
+                } as quizAnswerInterface,
+                {
+                  text: '',
+                  questionId: questionList?.length ?? 0,
+                  isCorrect: false
+                } as quizAnswerInterface,
+                {
+                  text: '',
+                  questionId: questionList?.length ?? 0,
+                  isCorrect: false
+                } as quizAnswerInterface
+              ]
+            } as quizQuestionInterface;
 
-            setAnswerList(answerList ? [...answerList, answer] : [answer]);
+            setQuestionList(questionList ? [...questionList, question] : [question]);
           }}>
             <AddIcon />
-            Add answer
+            Add question
           </Fab>
         </div>
 
@@ -118,7 +155,7 @@ export default function QuizCreate(){
         <Button
           variant="contained"
           color="primary"
-          sx={{ maxWidth: "50%"}}
+          sx={{ maxWidth: "50%", marginBottom: "2rem"}}
           // onClick={validateInputData}
         >
           Add quiz
