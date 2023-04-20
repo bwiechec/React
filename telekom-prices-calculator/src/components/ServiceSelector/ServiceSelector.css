@@ -1,0 +1,19 @@
+.service-selector{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 5vw;
+}
+
+.serivce-selector__item{
+  display: table-row;
+}
+
+.service-selector__select{
+  display: block;
+}
+
+.service-selector__table{
+  display: block;
+  margin-top: 15vh;
+}

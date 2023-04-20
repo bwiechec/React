@@ -1,0 +1,12 @@
+.service-calculator{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 30%;
+  padding: 5vw;
+}
+
+.service-calculator__summary{
+  margin-top: 15vh;
+  padding: 1.5vw;
+}
