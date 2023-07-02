@@ -1,0 +1,39 @@
+.banner{
+  -webkit-box-align: end;
+  align-items: flex-end;
+  z-index: 3;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  user-select: none;
+}
+
+.banner-user{
+  width: 275px;
+}
+
+.banner-user-fix{
+  height: 100%;
+  backface-visibility: hidden;
+  top: 0px;
+  position: fixed;
+}
+
+.banner-user-fix-list{
+  overflow-y: auto;
+
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+
+  height: 100%;
+
+  width: 275px;
+
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.banner-user-fix-list__action-list{
+  -webkit-box-align: start;
+  align-items: flex-start;
+}

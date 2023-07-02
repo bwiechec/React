@@ -1,0 +1,18 @@
+.trends {
+  border-radius: 24px;
+  display: flex;
+
+  background-color: rgb(32, 35, 39);
+  padding: 0px 12px;
+  width: 100%;
+
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  margin-top: 2em;
+}
+
+.trends__title {
+  margin: .5em;
+  font-size: 1.4em;
+}

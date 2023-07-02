@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5c547c7a-8246-4787-8c38-1c49e4009031" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz-react-ts/src/components/quizCategories/QuizCategories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/quiz-react-ts/src/components/quizCategories/QuizCategories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz-react-ts/src/components/quizCreate/QuizCreate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/quiz-react-ts/src/components/quizCreate/QuizCreate.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz-react-ts/src/components/quizCreate/QuizQuestion.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/quiz-react-ts/src/components/quizCreate/QuizQuestion.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../telekom-prices-calculator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../telekom-prices-calculator/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2CeqkEvjhStziIxksmzrg4dytky" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Twitter-Clone" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="ts.external.directory.path" value="D:\GitHub\React\QUIZ\quiz-server\node_modules\typescript\lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GitHub\React\QUIZ\quiz-react-ts\src\components\quizCreate" />
+      <recent name="D:\GitHub\React\QUIZ\quiz-react-ts\src\components\quizCategories" />
+      <recent name="D:\GitHub\React\QUIZ\quiz-react-ts\src\components\quizList" />
+      <recent name="D:\GitHub\React\QUIZ\quiz-server\src\config" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5c547c7a-8246-4787-8c38-1c49e4009031" name="Changes" comment="" />
+      <created>1659173540197</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1659173540197</updated>
+      <workItem from="1659173546966" duration="4436000" />
+      <workItem from="1659197855693" duration="1503000" />
+      <workItem from="1659279794256" duration="5014000" />
+      <workItem from="1659370965121" duration="3015000" />
+      <workItem from="1659384530682" duration="408000" />
+      <workItem from="1659454117273" duration="1348000" />
+      <workItem from="1659627721189" duration="6962000" />
+      <workItem from="1659890389767" duration="10308000" />
+      <workItem from="1660065418127" duration="3879000" />
+      <workItem from="1660074333669" duration="356000" />
+      <workItem from="1660670135470" duration="2191000" />
+      <workItem from="1662649389442" duration="8355000" />
+      <workItem from="1662813557821" duration="7408000" />
+      <workItem from="1669568430996" duration="3720000" />
+      <workItem from="1669741026897" duration="5082000" />
+      <workItem from="1669754400118" duration="2801000" />
+      <workItem from="1669829046475" duration="2886000" />
+      <workItem from="1670182326981" duration="4218000" />
+      <workItem from="1670519870402" duration="5513000" />
+      <workItem from="1670666027138" duration="7488000" />
+      <workItem from="1670687394830" duration="4260000" />
+      <workItem from="1672329742441" duration="1803000" />
+      <workItem from="1674062328452" duration="2691000" />
+      <workItem from="1675192395945" duration="3435000" />
+      <workItem from="1675791640818" duration="2506000" />
+      <workItem from="1675872845911" duration="3583000" />
+      <workItem from="1676547144333" duration="843000" />
+      <workItem from="1676548596826" duration="663000" />
+      <workItem from="1676815188224" duration="886000" />
+      <workItem from="1677608409184" duration="671000" />
+      <workItem from="1677865127156" duration="7867000" />
+      <workItem from="1678038249616" duration="5159000" />
+      <workItem from="1686501628179" duration="5878000" />
+      <workItem from="1686756768383" duration="1173000" />
+      <workItem from="1686843863807" duration="516000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

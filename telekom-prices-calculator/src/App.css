@@ -1,0 +1,24 @@
+.navbar, .footer{
+  width: 100%;
+}
+
+.navbar{
+  font-size: 32px;
+  text-align: center;
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  font-size: 18px;
+  text-align: right;
+  margin-right: 1vw;
+}
+
+.container{
+  display: flex;
+}
+
+.footer__text{
+  padding: 1vh;
+}
