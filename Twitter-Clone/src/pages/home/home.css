@@ -1,0 +1,49 @@
+.main-panel {
+  -webkit-box-align: start;
+  align-items: flex-start;
+
+  flex-shrink: 1;
+
+  -ms-flex-positive: 1;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+
+.main-panel-content{
+  width: 990px;
+}
+
+.main-panel-content2 {
+  -webkit-box-align: stretch;
+  align-items: stretch;
+
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+
+  flex-shrink: 1;
+
+  -ms-flex-direction: row;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+
+  -ms-flex-positive: 1;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+
+.search-icon {
+  margin-left: 10px;
+  width: 20px;
+
+  height: 1.75rem;
+  color: rgb(113, 118, 123);
+  vertical-align: text-bottom;
+  position: relative;
+  max-width: 100%;
+  display: inline-block;
+  fill: currentColor;
+}

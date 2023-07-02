@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c547c7a-8246-4787-8c38-1c49e4009031" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/quiz-react-ts/src/components/quizCreate/QuizQuestion.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz-react-ts/src/components/quizCreate/QuizAnswer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/quiz-react-ts/src/components/quizCreate/QuizAnswer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz-react-ts/src/components/quizCategories/QuizCategories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/quiz-react-ts/src/components/quizCategories/QuizCategories.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/quiz-react-ts/src/components/quizCreate/QuizCreate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/quiz-react-ts/src/components/quizCreate/QuizCreate.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz-react-ts/src/interfaces/interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/quiz-react-ts/src/interfaces/interfaces.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quiz-react-ts/src/components/quizCreate/QuizQuestion.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/quiz-react-ts/src/components/quizCreate/QuizQuestion.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../telekom-prices-calculator/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../telekom-prices-calculator/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +49,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/react-assessment" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Twitter-Clone" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="ts.external.directory.path" value="D:\GitHub\React\QUIZ\quiz-server\node_modules\typescript\lib" />
@@ -103,6 +103,9 @@
       <workItem from="1677608409184" duration="671000" />
       <workItem from="1677865127156" duration="7867000" />
       <workItem from="1678038249616" duration="5159000" />
+      <workItem from="1686501628179" duration="5878000" />
+      <workItem from="1686756768383" duration="1173000" />
+      <workItem from="1686843863807" duration="516000" />
     </task>
     <servers />
   </component>

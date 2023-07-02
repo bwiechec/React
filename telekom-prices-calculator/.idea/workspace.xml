@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83f7831a-accd-442d-ac89-d5e573dd6761" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Utils/utlis.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Navbar/Navbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ServiceCalculator/ServiceCalculator.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ServiceCalculator/ServiceCalculator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ServiceCalculator/ServiceCalculatorOffer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ServiceSelector/ServiceSelector.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ServiceSelector/ServiceSelector.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ServiceSelector/ServiceSelectorTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QUIZ/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../QUIZ/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../QUIZ/quiz-react-ts/src/components/quizCreate/QuizCreate.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../QUIZ/quiz-react-ts/src/components/quizCreate/QuizCreate.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="83f7831a-accd-442d-ac89-d5e573dd6761" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,6 +48,7 @@
       <updated>1681931445049</updated>
       <workItem from="1681931451392" duration="7002000" />
       <workItem from="1681974606897" duration="6741000" />
+      <workItem from="1686501616532" duration="10000" />
     </task>
     <servers />
   </component>

@@ -23,8 +23,6 @@ export default function QuizQuestion({
 
     quizQuestion.quizAnswerList[index].text = text;
 
-    console.log(quizQuestion.quizAnswerList);
-
     updateQuestion(questionIndex, quizQuestion);
   }
 

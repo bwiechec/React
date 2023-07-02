@@ -1,0 +1,15 @@
+.main-panel {
+  -webkit-box-align: start;
+  align-items: flex-start;
+
+  flex-shrink: 1;
+
+  -ms-flex-positive: 1;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+
+.main-panel-content{
+  width: 990px;
+}

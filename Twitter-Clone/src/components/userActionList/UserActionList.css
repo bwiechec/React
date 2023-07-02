@@ -1,0 +1,100 @@
+.action-list__action {
+  -ms-flex-pack: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+
+  -ms-flex-direction: row;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+
+  -moz-transition-property: background-color, box-shadow;
+  -webkit-transition-property: background-color, box-shadow;
+  transition-property: background-color, box-shadow;
+
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+
+  max-width: 100%;
+
+  padding: 12px;
+
+  border-bottom-left-radius: 9999px;
+  border-bottom-right-radius: 9999px;
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+
+  display: flex;
+}
+
+.action-list {
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  flex-direction: column;
+
+  -webkit-box-align: start;
+  align-items: flex-start;
+
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+
+  width: 90%;
+}
+
+.action-list__link{
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  flex-direction: column;
+
+  cursor: pointer;
+
+  text-decoration: none;
+  color: rgb(214, 217, 219);
+
+  -webkit-box-align: start;
+  align-items: flex-start;
+
+  width: 100%;
+
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+
+  outline-style: none;
+
+  padding-bottom: 4px;
+  padding-top: 4px;
+
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.action-list__action:hover {
+  background-color: rgba(231, 233, 234, 0.1);
+}
+
+.action-list__action-name{
+  margin-left: 20px;
+  line-height: 24px;
+  font-size: 20px;
+  font-weight: 400;
+  word-wrap: break-word;
+  min-width: 0px;
+
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

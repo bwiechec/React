@@ -10,7 +10,7 @@ import {
   Fab, SelectChangeEvent
 } from "@mui/material";
 import AddIcon from '@mui/icons-material/Add';
-import React, {ChangeEvent, useEffect, useState} from "react";
+import React, {ChangeEvent, FormEvent, FormEventHandler, useEffect, useState} from "react";
 import {categoryListInterface, quizAnswerInterface, quizQuestionInterface} from "../../interfaces/interfaces";
 import {getAccessToken} from "../../utils/token";
 import QuizAnswer from "./QuizAnswer";
@@ -22,6 +22,30 @@ export default function QuizCreate(){
   const [categoryList, setCategoryList] = useState<Array<categoryListInterface>>([]);
   const [categorySelected, setCategorySelected] = useState<number>();
   const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  const getNewQuestion = () => {
+    return {
+      quizId: null,
+      text: '',
+      quizAnswerList: [
+        {
+          text: '',
+          questionId: questionList?.length ?? 0,
+          isCorrect: true
+        } as quizAnswerInterface,
+        {
+          text: '',
+          questionId: questionList?.length ?? 0,
+          isCorrect: false
+        } as quizAnswerInterface,
+        {
+          text: '',
+          questionId: questionList?.length ?? 0,
+          isCorrect: false
+        } as quizAnswerInterface
+      ]
+    } as quizQuestionInterface;
+  }
 
   useEffect(() => {
     fetch('http://127.0.0.1:4000/categoryList', {
@@ -38,18 +62,15 @@ export default function QuizCreate(){
         setCategoryList(resJson.response.quizCategoryList);
         setCategorySelected(resJson.response.quizCategoryList[0].categoryId);
         setIsLoading(false);
+        if(!questionList)
+          setQuestionList(questionList ? [...questionList, getNewQuestion()] : [getNewQuestion()]);
         console.log(resJson);
       });
   }, [])
 
-  console.log('categoryList')
-  console.log(categoryList)
-
   if(isLoading || categoryList === undefined){
     return <CircularProgress />
   }
-
-  console.log(questionList);
 
   const handleChange = (event: SelectChangeEvent<number>) => {
     //setPassword(value);
@@ -64,9 +85,18 @@ export default function QuizCreate(){
 
     setQuestionList([...questionList]);
   }
+
+  const saveQuiz = (event: FormEvent<EventTarget>) => {
+    event.preventDefault();
+    console.log(questionList);
+  }
+
   return(
     <div>
-      <FormGroup sx={{maxWidth: "35rem", marginInline: "auto"}}>
+      <form
+        style={{maxWidth: "35rem", marginInline: "auto"}}
+        onSubmit={saveQuiz}
+      >
         <TextField
           required
           // error={userNameError}
@@ -76,7 +106,7 @@ export default function QuizCreate(){
           margin="normal"
           // onChange={updateInsertedUserName}
         />
-        <FormControl fullWidth variant="standard">
+        <FormControl fullWidth variant="standard" required>
           <InputLabel id="quiz-category-select-label">Quiz category</InputLabel>
           <Select
             labelId="quiz-category-select-label"
@@ -117,29 +147,7 @@ export default function QuizCreate(){
         <div style={{display: 'flex', justifyContent: 'flex-end'}}>
           <Fab color="primary" aria-label="add" style={{float: 'left', marginBottom: "2rem"}} variant="extended" onClick={() => {
 
-            let question = {
-              quizId: null,
-              text: '',
-              quizAnswerList: [
-                {
-                  text: '',
-                  questionId: questionList?.length ?? 0,
-                  isCorrect: true
-                } as quizAnswerInterface,
-                {
-                  text: '',
-                  questionId: questionList?.length ?? 0,
-                  isCorrect: false
-                } as quizAnswerInterface,
-                {
-                  text: '',
-                  questionId: questionList?.length ?? 0,
-                  isCorrect: false
-                } as quizAnswerInterface
-              ]
-            } as quizQuestionInterface;
-
-            setQuestionList(questionList ? [...questionList, question] : [question]);
+            setQuestionList(questionList ? [...questionList, getNewQuestion()] : [getNewQuestion()]);
           }}>
             <AddIcon />
             Add question
@@ -156,11 +164,11 @@ export default function QuizCreate(){
           variant="contained"
           color="primary"
           sx={{ maxWidth: "50%", marginBottom: "2rem"}}
-          // onClick={validateInputData}
+          type="submit"
         >
           Add quiz
         </Button>
-      </FormGroup >
+      </form>
     </div>
   )
 }

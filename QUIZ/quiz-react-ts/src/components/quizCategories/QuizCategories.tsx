@@ -16,6 +16,7 @@ export default function QuizCategories(){
 
   const [categoryList, setCategoryList] = useState<Array<categoryListInterface>>();
   const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [isError, setIsError] = useState<boolean>(false);
 
   useEffect(() => {
     fetch('http://127.0.0.1:4000/categoryList', {
@@ -30,15 +31,23 @@ export default function QuizCategories(){
       .then(res => res.json())
       .then(resJson => {
         setIsLoading(false);
-        setCategoryList(resJson.response.quizCategoryList);
+        if(resJson.errCode){
+          setIsError(true);
+        }
+        else {
+          setCategoryList(resJson.response.quizCategoryList)
+          setIsError(false);
+        }
         console.log(resJson);
       });
   }, [])
 
   console.log('categoryList')
   console.log(categoryList)
-
-  if(isLoading || categoryList === undefined || categoryList?.length === 0){
+  if(isError){
+    return <p>ERROR</p>
+  }
+  else if(isLoading || categoryList === undefined || categoryList?.length === 0){
     return <CircularProgress />
   }
 
