@@ -7,8 +7,13 @@ import SentimentSatisfiedOutlinedIcon from "@mui/icons-material/SentimentSatisfi
 import ScheduleOutlinedIcon from "@mui/icons-material/ScheduleOutlined";
 import FmdGoodOutlinedIcon from "@mui/icons-material/FmdGoodOutlined";
 import {StyledButton} from "../styledButton/StyledButton";
+import Post from "../post/Post";
+import postListData from "../../data/postListData";
 
 function Timeline() {
+  const postCount = 5;
+
+  console.log(postListData);
 
   const changeSelected = (event) => {
 
@@ -105,10 +110,11 @@ function Timeline() {
         </div>
       </div>
       <div className={"timeline-content content-style"}>
-        test <br />
-        test <br />
-        test <br />
-        test <br />
+        { postListData.map( post => {
+              return(<Post postData={post}/>)
+            }
+          )
+        }
       </div>
     </div>
   )
