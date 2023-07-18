@@ -3,7 +3,7 @@
   display: flex;
 
   background-color: rgb(32, 35, 39);
-  padding: 0px 12px;
+  /*padding: 0px 12px;*/
   width: 100%;
 
   flex-wrap: wrap;
@@ -13,6 +13,6 @@
 }
 
 .trends__title {
-  margin: .5em;
+  margin: 12px 16px;
   font-size: 1.4em;
 }

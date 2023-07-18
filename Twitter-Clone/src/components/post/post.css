@@ -6,6 +6,11 @@
   flex-direction: row;
 }
 
+.post:hover {
+   background-color: rgba(231, 233, 234, 0.1);
+  cursor: pointer;
+}
+
 .post-data {
   margin-left: 1rem;
   width: 100%;
@@ -51,4 +56,52 @@
 .stat {
   align-items: center;
   display: flex;
+}
+
+.stat svg {
+  width: 1.1rem;
+  border: 0.4rem solid transparent;
+  border-radius: 1rem;
+}
+
+.post-data__content-image {
+  margin-top: 0.7rem;
+  max-width: 95%;
+  border-radius: 1rem;
+  border: thin solid rgb(113, 118, 123);
+}
+
+.stat-reply:hover, .stat-views:hover {
+  color: rgb(29, 155, 240);
+}
+
+.stat-redogg:hover {
+  color: rgb(249, 24, 128);
+}
+
+.stat-like:hover {
+  color: rgb(0, 186, 124);
+}
+
+.stat-reply:hover svg, .stat-views:hover svg {
+  background-color: rgba(29, 155, 240, 0.05);
+  border-color: rgba(29, 155, 240, 0.05);
+}
+
+.stat-redogg:hover {
+  color: rgb(249, 24, 128);
+}
+
+.stat-redogg:hover svg {
+  background-color: rgba(249, 24, 128, 0.05);
+  border-color: rgba(249, 24, 128, 0.05);
+}
+
+.stat-like:hover {
+  color: rgb(0, 186, 124);
+}
+
+.stat-like:hover svg {
+  background-color: rgba(0, 186, 124, 0.05);
+  border-color: rgba(0, 186, 124, 0.05);
 }

@@ -44,22 +44,29 @@ function Post(props) {
 
         <div className={"post-data__content"}>
           {props.postData.postContent}
+          {props.postData.img !== null ?
+            <img
+              src={props.postData.img}
+              className={"post-data__content-image"}
+            />
+            :
+            null}
         </div>
 
         <div className={"post-data__stats"}>
-          <div className={"stat"}>
+          <div className={"stat stat-reply"}>
             <ChatBubbleOutlineOutlinedIcon />
             {formatNumber(props.postData.replyCount)}
           </div>
-          <div className={"stat"}>
+          <div className={"stat stat-redogg"}>
             <AutorenewOutlinedIcon />
             {formatNumber(props.postData.redoggsCount)}
           </div>
-          <div className={"stat"}>
+          <div className={"stat stat-like"}>
             <FavoriteBorderOutlinedIcon />
             {formatNumber(props.postData.likeCount)}
           </div>
-          <div className={"stat"}>
+          <div className={"stat stat-views"}>
             <EqualizerOutlinedIcon />
             {formatNumber(props.postData.viewCount)}
           </div>

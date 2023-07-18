@@ -7,7 +7,8 @@ const postListData = [
     "redoggsCount": 12,
     "likeCount": 645,
     "viewCount": 123402,
-    "postContent": 'Lorem ipsum'
+    "postContent": 'Lorem ipsum',
+    "img": 'src/assets/post_imgae_1.jpg'
   },
   {
     "creatorName": "Test Creator2",
