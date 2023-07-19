@@ -5,7 +5,14 @@
 
 .sidebar-content {
   position: sticky;
-  min-height: 1518.19px;
+  min-height: fit-content;
+  padding-bottom: 64px;
+
+
+  transition: top 1s;
+}
+
+.sidebar-buffer {
 }
 
 .sidebar-search {

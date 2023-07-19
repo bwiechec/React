@@ -19,7 +19,7 @@
 
 .timeline-content {
   position: relative;
-  min-height: 5000px;
+  min-height: fit-content;
 }
 
 .timeline-nav__header {

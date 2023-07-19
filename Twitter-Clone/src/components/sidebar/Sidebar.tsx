@@ -11,16 +11,30 @@ function Sidebar() {
     const sidebar = document.querySelector('.sidebar-content');
     const buffer = document.querySelector('.sidebar-buffer');
 
+    let top = 0;
+    let bottom = 0;
+
+    let marginTop = 1;
+    let marginBottom = 1;
+
+    if(sidebar.offsetHeight > window.innerHeight) {
+      top = -(sidebar.offsetHeight - window.innerHeight + 10)
+      bottom = -(sidebar.offsetHeight - window.innerHeight);
+
+      marginBottom = window.scrollY > (-1 * bottom) ? window.scrollY + bottom : 1;
+      marginTop = window.scrollY > (-1 * top) ? window.scrollY + top - bottom : 1;
+    }
+
     if(oldScrollY > window.scrollY && !prevDirection) {
-      sidebar.style.bottom = '-567px';
-      sidebar.style.top = '';
-      buffer.style.marginTop = `${window.scrollY - 497 > 0 ? window.scrollY - 497 : 1}px`;
+      sidebar.style.bottom = `${bottom ? bottom+'px' : ''}`;
+      sidebar.style.top = `${bottom ? '' : top+'px'}`;
+      buffer.style.marginTop = `${marginBottom}px`
       prevDirection = 1
     }
     else if(oldScrollY < window.scrollY && prevDirection) {
-      sidebar.style.top = '-497px'
+      sidebar.style.top = `${top}px`;
       sidebar.style.bottom = '';
-      buffer.style.marginTop = `${window.scrollY}px`;
+      buffer.style.marginTop = `${marginTop}px`;
       prevDirection = 0
     }
 
@@ -41,11 +55,11 @@ function Sidebar() {
       <div className={'sidebar-buffer content-style'} />
       <div
         className={'sidebar-content content-style'}
-        style={{bottom: "-587px"}}
+        style={{bottom: "0px"}}
       >
         <div
           className={'sidebar-search content-style'}
-          style={{marginTop: "1px"}}
+          style={{marginTop: "0px"}}
         >
           <label className={"content-style"}>
             <div className={"sidebar-search__icon"}>
